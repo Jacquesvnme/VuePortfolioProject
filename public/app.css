@@ -1,5 +1,22 @@
-:root{
+:root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
     --tertiary-color: #e74c3c;
+    --dark-gray: #2c3e50;
+    --dark-font: #ecf0f1;
+}
+
+html,
+body,
+#app {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(52, 152, 219, 0.25), transparent 45%),
+        linear-gradient(135deg, #243447 0%, #1b2836 100%);
+    color: var(--dark-font);
 }
