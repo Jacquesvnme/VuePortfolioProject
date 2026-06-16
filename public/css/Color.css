@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --tertiary-color: #e74c3c;
+  --dark-gray: #2c3e50;
+  --dark-font: #ecf0f1;
+  --background-animation-primary: #1abc9c;
+  --background-animation-light: rgba(26, 188, 156, 0.3);
+  --background-animation-dark: rgba(26, 188, 156, 0.08);
+}
