@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+/*TODO
+Add an animated background with potencially text moving
+vertically and horizontally in a slow motion to add some visual interest to the page
+*/
+</script>
 
 <template>
   <main class="page">
