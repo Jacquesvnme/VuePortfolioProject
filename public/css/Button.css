@@ -16,3 +16,17 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(46, 204, 113, 0.35);
 }
+
+.small-button-styling {
+  max-width: 40px;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px 4px 10px;
+  font-weight: 700;
+  color: #12202e;
+  background: linear-gradient(90deg, var(--secondary-color), #80ffc3);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}

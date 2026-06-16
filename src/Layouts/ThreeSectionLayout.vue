@@ -2,6 +2,7 @@
 import CompactNav from '../Components/Navigator/CompactNav.vue'
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
 import Bubbles from '../Components/Background/Bubbles.vue'
+import AngleLeft from '../Components/Svg/AngleLeft.vue'
 
 /*TODO
 I have a few ideas here for this page
@@ -21,7 +22,12 @@ Need to test more mobile reactiveness and test
 <template>
   <main class="three-section-layout">
     <aside class="page-section">
-      <p class="eyebrow">Portfolio</p>
+      <div class="panel-header-inline">
+        <RouterLink :to="'/Portfolio-Dashboard'" class="small-button-styling center-align">
+          <AngleLeft class="small-svg-styling" />
+        </RouterLink>
+        <p class="eyebrow">Portfolio</p>
+      </div>
       <SmallSpacer />
       <CompactNav />
     </aside>
@@ -43,5 +49,19 @@ Need to test more mobile reactiveness and test
   height: 100%;
   padding: 1rem !important;
   border-radius: 12px !important;
+}
+
+.small-svg-styling {
+  color: var(--black);
+  margin-right: 0px !important;
+}
+
+.panel-header-inline {
+  display: inline-flex;
+  align-items: center;
+}
+
+.panel-header-inline .eyebrow {
+  margin-left: 10px;
 }
 </style>

@@ -1,15 +1,6 @@
 <script setup>
 import ExtraSmallSpacer from '../Spacers/ExtraSmallSpacer.vue'
 import AngleRight from '../Svg/AngleRight.vue'
-
-/*TODO
-Need to add small and large back buttons to the CompactView
-*/
-
-/*TODO
-Need to make the entire card clickable and not just the text
-Keep in mind the on:hover event
-*/
 </script>
 
 <template>
@@ -37,6 +28,10 @@ Keep in mind the on:hover event
 </template>
 
 <style scoped>
+.small-svg-styling {
+  margin-right: 0.5rem;
+}
+
 .compact-card {
   height: 10px !important;
   border-radius: 4px !important;
@@ -44,15 +39,6 @@ Keep in mind the on:hover event
   display: flex;
   align-items: center;
   overflow: hidden;
-}
-
-.small-svg-styling {
-  width: 1rem;
-  height: 1rem;
-  color: var(--secondary-color);
-  margin-right: 0.5rem;
-  vertical-align: middle;
-  margin-top: -0.1rem;
 }
 
 .link {

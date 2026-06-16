@@ -51,18 +51,14 @@ import SmallSpacer from '../Spacers/SmallSpacer.vue'
 </template>
 
 <style scoped>
+.small-svg-styling {
+  margin-right: 0.5rem;
+}
+
 .link-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.small-svg-styling {
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-  margin-top: -0.1rem;
 }
 
 .card {

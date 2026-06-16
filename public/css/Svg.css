@@ -1,0 +1,20 @@
+.small-svg-styling {
+  width: 1rem;
+  height: 1rem;
+  color: var(--secondary-color);
+  vertical-align: middle;
+}
+
+.medium-svg-styling {
+  width: 3rem;
+  height: 3rem;
+  color: var(--secondary-color);
+  vertical-align: middle;
+}
+
+.large-svg-styling {
+  width: 5rem;
+  height: 5rem;
+  color: var(--secondary-color);
+  vertical-align: middle;
+}
