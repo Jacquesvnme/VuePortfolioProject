@@ -11,6 +11,10 @@ Have this be small and semi floating on the left side of the page
 Add a top bar with dynamically built up url with 'backwards' navigation and any other required buttons
 Have this floating to the left and 70% across the page
 */
+
+/*TODO
+Need to test more mobile reactiveness and test
+*/
 </script>
 
 <template>
