@@ -9,7 +9,7 @@ import AngleLeft from '../Components/Svg/AngleLeft.vue'
   <main class="dashboard-page">
     <section class="card">
       <div class="panel-header-inline">
-        <RouterLink :to="'/Portfolio-Dashboard'" class="small-button-styling center-align">
+        <RouterLink :to="'/'" class="small-button-styling center-align">
           <AngleLeft class="small-svg-styling" />
         </RouterLink>
         <p class="eyebrow">Portfolio Dashboard</p>
