@@ -4,6 +4,7 @@ import LargeNav from '../Components/Navigator/LargeNav.vue'
 
 //Utils
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
+import Bubbles from '../Components/Background/Bubbles.vue'
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
 
       <LargeNav />
     </section>
+    <Bubbles />
   </main>
 </template>
 

@@ -1,6 +1,7 @@
 <script setup>
 import CompactNav from '../Components/Navigator/CompactNav.vue'
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
+import Bubbles from '../Components/Background/Bubbles.vue'
 
 /*TODO
 I have a few ideas here for this page
@@ -32,6 +33,8 @@ Need to test more mobile reactiveness and test
     </section>
 
     <aside class="page-section about-right-panel"></aside>
+
+    <Bubbles />
   </main>
 </template>
 
