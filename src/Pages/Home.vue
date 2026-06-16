@@ -1,10 +1,5 @@
 <script setup>
 import Bubbles from '../Components/Background/Bubbles.vue'
-
-/*TODO
-Add an animated background with potencially text moving
-vertically and horizontally in a slow motion to add some visual interest to the page
-*/
 </script>
 
 <template>

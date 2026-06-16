@@ -13,31 +13,27 @@ Keep in mind the on:hover event
 </script>
 
 <template>
-  <div class="card compact-card">
-    <AngleRight class="small-svg-styling" />
-    <RouterLink class="link" :to="'/About-Me'">About Me</RouterLink>
-  </div>
+  <RouterLink class="link" :to="'/About-Me'">
+    <div class="card compact-card"><AngleRight class="small-svg-styling" />About Me</div>
+  </RouterLink>
 
   <ExtraSmallSpacer />
 
-  <div class="card compact-card">
-    <AngleRight class="small-svg-styling" />
-    <RouterLink class="link" :to="'/Skills'">Skills</RouterLink>
-  </div>
+  <RouterLink class="link" :to="'/Skills'">
+    <div class="card compact-card"><AngleRight class="small-svg-styling" />Skills</div>
+  </RouterLink>
 
   <ExtraSmallSpacer />
 
-  <div class="card compact-card">
-    <AngleRight class="small-svg-styling" />
-    <RouterLink class="link" :to="'/Details'">Details</RouterLink>
-  </div>
+  <RouterLink class="link" :to="'/Details'">
+    <div class="card compact-card"><AngleRight class="small-svg-styling" />Details</div>
+  </RouterLink>
 
   <ExtraSmallSpacer />
 
-  <div class="card compact-card">
-    <AngleRight class="small-svg-styling" />
-    <RouterLink class="link" :to="'/Academic-History'">Academic History</RouterLink>
-  </div>
+  <RouterLink class="link" :to="'/Academic-History'">
+    <div class="card compact-card"><AngleRight class="small-svg-styling" />Academic History</div>
+  </RouterLink>
 </template>
 
 <style scoped>
@@ -64,5 +60,9 @@ Keep in mind the on:hover event
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
+}
+
+.link:hover {
+  text-decoration: none !important;
 }
 </style>
