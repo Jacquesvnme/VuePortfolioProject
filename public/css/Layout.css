@@ -74,7 +74,7 @@
 @media (max-width: 980px) {
   .three-section-layout {
     grid-template-columns: 1fr;
-    grid-template-rows: 180px 80vh;
+    grid-template-rows: 205px 80vh;
     gap: 0.5rem;
     padding: 0.5rem;
   }
