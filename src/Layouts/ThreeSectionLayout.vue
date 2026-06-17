@@ -3,6 +3,7 @@ import CompactNav from '../Components/Navigator/CompactNav.vue'
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
 import Bubbles from '../Components/Background/Bubbles.vue'
 import AngleLeft from '../Components/Svg/AngleLeft.vue'
+import TopBar from '../Components/Bar/TopBar.vue'
 
 /*TODO
 I have a few ideas here for this page
@@ -33,12 +34,8 @@ Need to test more mobile reactiveness and test
     </aside>
 
     <section class="page-section">
-      <div class="card">
-        <slot />
-      </div>
+      <slot />
     </section>
-
-    <aside class="page-section about-right-panel"></aside>
 
     <Bubbles />
   </main>
