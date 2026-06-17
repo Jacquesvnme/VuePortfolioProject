@@ -30,3 +30,10 @@
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
+
+.small-button-styling:hover {
+  background: var(--tertiary-color);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}

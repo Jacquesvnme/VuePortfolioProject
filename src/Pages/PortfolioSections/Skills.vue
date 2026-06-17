@@ -6,7 +6,9 @@ import SmallSpacer from '../../Components/Spacers/SmallSpacer.vue'
 
 <template>
   <ThreeSectionLayout>
-    <TopBar to="/Skills" label="Skills" />
+    <div class="TopBar">
+      <TopBar to="/Skills" label="Skills" />
+    </div>
     <SmallSpacer />
     <div class="card">
       <p class="eyebrow">Skills</p>

@@ -27,4 +27,8 @@ import Bubbles from '../Components/Background/Bubbles.vue'
   position: relative;
   z-index: 10;
 }
+
+.max-width {
+  max-width: 58ch;
+}
 </style>

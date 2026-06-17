@@ -1,0 +1,19 @@
+/* LINKS */
+.link {
+  display: inline-block;
+  color: var(--secondary-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:hover *,
+.link:focus-visible,
+.link:focus-visible * {
+  color: var(--tertiary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--tertiary-color);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
