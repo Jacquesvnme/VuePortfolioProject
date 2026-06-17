@@ -12,6 +12,13 @@ import AddressBook from '../../Components/Svg/AddressBook.vue'
 import Wrench from '../../Components/Svg/Wrench.vue'
 import User from '../../Components/Svg/User.vue'
 import AngleRight from '../../Components/Svg/AngleRight.vue'
+
+/*TODO
+Add a google image of general area in which I live or reside in
+
+TODO
+Add the languages I know and speak
+*/
 </script>
 
 <template>
