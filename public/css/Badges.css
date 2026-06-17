@@ -1,0 +1,86 @@
+:root {
+  --badge-html5-bg: #e34f26;
+  --badge-html5-text: #ffffff;
+
+  --badge-css-bg: #1572b6;
+  --badge-css-text: #ffffff;
+
+  --badge-javascript-bg: #f7df1e;
+  --badge-javascript-text: #1a1a1a;
+
+  --badge-python-bg: #3776ab;
+  --badge-python-text: #ffffff;
+
+  --badge-csharp-bg: #512bd4;
+  --badge-csharp-text: #ffffff;
+
+  --badge-sql-bg: #d32f2f;
+  --badge-sql-text: #ffffff;
+
+  --badge-tsql-bg: #c62828;
+  --badge-tsql-text: #ffffff;
+
+  --badge-postgresql-bg: #336791;
+  --badge-postgresql-text: #ffffff;
+
+  --badge-markdown-bg: #111111;
+  --badge-markdown-text: #ffffff;
+
+  --badge-nodejs-bg: #539e43;
+  --badge-nodejs-text: #ffffff;
+
+  --badge-json-bg: #000000;
+  --badge-json-text: #ffffff;
+
+  --badge-jquery-bg: #0769ad;
+  --badge-jquery-text: #ffffff;
+
+  --badge-plotly-bg: #3f4f75;
+  --badge-plotly-text: #ffffff;
+
+  --badge-express-bg: #000000;
+  --badge-express-text: #ffffff;
+
+  --badge-nextjs-bg: #000000;
+  --badge-nextjs-text: #ffffff;
+
+  /* Application and tooling badge colors */
+  --badge-msword-bg: #2b579a;
+  --badge-msword-text: #ffffff;
+
+  --badge-msexcel-bg: #217346;
+  --badge-msexcel-text: #ffffff;
+
+  --badge-mspowerpoint-bg: #d24726;
+  --badge-mspowerpoint-text: #ffffff;
+
+  --badge-msaccess-bg: #a4373a;
+  --badge-msaccess-text: #ffffff;
+
+  --badge-msteams-bg: #6264a7;
+  --badge-msteams-text: #ffffff;
+
+  --badge-mssqlserver-bg: #cc2927;
+  --badge-mssqlserver-text: #ffffff;
+
+  --badge-github-bg: #7c3aed;
+  --badge-github-text: #ffffff;
+
+  --badge-visualstudio-bg: #5c2d91;
+  --badge-visualstudio-text: #ffffff;
+
+  --badge-vscode-bg: #007acc;
+  --badge-vscode-text: #ffffff;
+
+  --badge-npm-bg: #cb3837;
+  --badge-npm-text: #ffffff;
+
+  --badge-postman-bg: #ff6c37;
+  --badge-postman-text: #ffffff;
+
+  --badge-intellij-bg: #111111;
+  --badge-intellij-text: #ffffff;
+
+  --badge-netbeans-bg: #1b6ac6;
+  --badge-netbeans-text: #ffffff;
+}
