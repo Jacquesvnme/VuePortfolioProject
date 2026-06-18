@@ -30,7 +30,8 @@
   }
 
   .custom-list-contact li,
-  .custom-list-skills li {
+  .custom-list-skills li,
+  .custom-list-languages li {
     margin-left: -1.5rem;
   }
 }

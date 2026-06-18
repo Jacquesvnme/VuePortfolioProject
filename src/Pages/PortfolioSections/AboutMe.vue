@@ -37,6 +37,7 @@ Add the languages I know and speak
 
     <div class="card">
       <User class="medium-svg-styling" />
+      <!-- ! About Me -->
       <p class="eyebrow display-inline">About Me</p>
       <p class="about-me-paragraph">
         I'm a student currently studying at Belgium Campus I have learnt a wide variety of
@@ -48,6 +49,7 @@ Add the languages I know and speak
       </p>
 
       <ThinDivider />
+      <!-- ! Key Skills -->
       <Wrench class="medium-svg-styling" />
       <p class="eyebrow display-inline">Key Skills</p>
 
@@ -63,7 +65,7 @@ Add the languages I know and speak
       </ul>
 
       <ThinDivider />
-
+      <!-- ! Contact Details -->
       <AddressBook class="medium-svg-styling" />
       <p class="eyebrow display-inline">Contact Details</p>
 
@@ -134,6 +136,29 @@ Add the languages I know and speak
           </a>
         </li>
       </ul>
+
+      <ThinDivider />
+      <!-- ! Languages -->
+      <AddressBook class="medium-svg-styling" />
+      <p class="eyebrow display-inline">Languages</p>
+      <ul class="custom-list-languages">
+        <li><AngleRight class="small-svg-styling" />English</li>
+        <li><AngleRight class="small-svg-styling" />Afrikaans</li>
+      </ul>
+
+      <ThinDivider />
+      <!-- ! Address -->
+      <AddressBook class="medium-svg-styling" />
+      <p class="eyebrow display-inline">Current location</p>
+      <div class="current-location">
+        <img
+          src="/Images/GoogleAddress.png"
+          alt="Google Maps image of my current location"
+          class="location-image"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
     </div>
   </ThreeSectionLayout>
 </template>
@@ -150,13 +175,15 @@ Add the languages I know and speak
 }
 
 .custom-list-skills,
-.custom-list-contact {
+.custom-list-contact,
+.custom-list-languages {
   list-style-type: none;
   margin-left: -1rem;
 }
 
 .custom-list-skills li,
-.custom-list-contact li {
+.custom-list-contact li,
+.custom-list-languages li {
   margin-bottom: 0.5rem;
 }
 
@@ -167,5 +194,20 @@ Add the languages I know and speak
 
 .small-svg-styling {
   margin-right: 0.5rem;
+}
+
+/* Styling for the location image */
+.current-location {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.location-image {
+  width: min(100%, 720px);
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  object-fit: cover;
 }
 </style>
