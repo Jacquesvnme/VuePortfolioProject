@@ -3,6 +3,10 @@ import NextJs from './Archived/NextJs.vue'
 import ExpressJs from './Archived/ExpressJs.vue'
 import PlotlyJs from './Archived/PlotlyJs.vue'
 import PostgreSql from './Archived/PostgreSql.vue'
+
+/*TODO 
+All below need to be fixed
+*/
 </script>
 
 <template>
