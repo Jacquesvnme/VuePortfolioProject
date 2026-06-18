@@ -21,7 +21,7 @@
     "@vitejs/plugin-vue": "^6.0.6",
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-oxlint": "~1.60.0",
+    "eslint-plugin-oxlint": "~1.70.0",
     "eslint-plugin-vue": "~10.8.0",
     "globals": "^17.5.0",
     "npm-run-all2": "^8.0.4",
