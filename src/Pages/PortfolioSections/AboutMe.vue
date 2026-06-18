@@ -4,20 +4,26 @@ import TopBar from '../../Components/Bar/TopBar.vue'
 import SmallSpacer from '../../Components/Spacers/SmallSpacer.vue'
 import ThinDivider from '../../Components/Divider/ThinDivider.vue'
 
-import At from '../../Components/Svg/At.vue'
-import Github from '../../Components/Svg/Github.vue'
-import LinkedIn from '../../Components/Svg/LinkedIn.vue'
-import Link from '../../Components/Svg/Link.vue'
-import AddressBook from '../../Components/Svg/AddressBook.vue'
-import Wrench from '../../Components/Svg/Wrench.vue'
-import User from '../../Components/Svg/User.vue'
-import AngleRight from '../../Components/Svg/AngleRight.vue'
+import At from '../../Components/Svg/Normal/At.vue'
+import Github from '../../Components/Svg/Normal/Github.vue'
+import LinkedIn from '../../Components/Svg/Normal/LinkedIn.vue'
+import Link from '../../Components/Svg/Normal/Link.vue'
+import AddressBook from '../../Components/Svg/Normal/AddressBook.vue'
+import Wrench from '../../Components/Svg/Normal/Wrench.vue'
+import User from '../../Components/Svg/Normal/User.vue'
+import AngleRight from '../../Components/Svg/Normal/AngleRight.vue'
 
 /*TODO
 Add a google image of general area in which I live or reside in
 
+./GoogleAddress.png
+
 TODO
 Add the languages I know and speak
+
+- Langueges
+  - English
+  - Afrikaans
 */
 </script>
 

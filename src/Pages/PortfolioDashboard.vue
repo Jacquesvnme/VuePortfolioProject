@@ -2,7 +2,7 @@
 import LargeNav from '../Components/Navigator/LargeNav.vue'
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
 import Bubbles from '../Components/Background/Bubbles.vue'
-import AngleLeft from '../Components/Svg/AngleLeft.vue'
+import AngleLeft from '../Components/Svg/Normal/AngleLeft.vue'
 </script>
 
 <template>
