@@ -1,7 +1,3 @@
-<!-- <template>
-  <RouterView />
-</template> -->
-
 <template>
   <v-app>
     <v-main>
