@@ -12,8 +12,17 @@ body,
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background:
-    radial-gradient(circle at top right, rgba(52, 152, 219, 0.25), transparent 45%),
-    linear-gradient(135deg, #243447 0%, #1b2836 100%);
+  background: var(--app-background);
   color: var(--dark-font);
+}
+
+/* Vuetify overrides for background colors */
+.app-container {
+  background: var(--app-background) !important;
+  min-height: 100vh;
+}
+
+.main-container {
+  background: transparent !important;
+  padding: 0;
 }

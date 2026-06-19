@@ -12,4 +12,9 @@
 
   --black: #12202e;
   --white: #ecf0f1;
+
+  /* Vuetify background color override */
+  --app-background:
+    radial-gradient(circle at top right, rgba(52, 152, 219, 0.25), transparent 45%),
+    linear-gradient(135deg, #243447 0%, #1b2836 100%);
 }
