@@ -9,6 +9,10 @@ import Bubbles from '../Components/Background/Bubbles.vue'
       <h1>Jacques Van Niekerk</h1>
       <p class="subtitle">View my work, projects and interests.</p>
 
+      <div style="margin-top: 20px">
+        <b class="subtitle">Take Note, this site is still actively in development.</b>
+      </div>
+
       <RouterLink :to="'/Portfolio-Dashboard'">
         <button class="button" type="button">View My Work</button>
       </RouterLink>
