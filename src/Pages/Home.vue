@@ -1,7 +1,3 @@
-<script setup>
-import Bubbles from '../Components/Background/Bubbles.vue'
-</script>
-
 <template>
   <main class="page">
     <section>
@@ -17,7 +13,6 @@ import Bubbles from '../Components/Background/Bubbles.vue'
         <button class="button" type="button">View My Work</button>
       </RouterLink>
     </section>
-    <Bubbles />
   </main>
 </template>
 

@@ -1,7 +1,6 @@
 <script setup>
 import CompactNav from '../Components/Navigator/CompactNav.vue'
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
-import Bubbles from '../Components/Background/Bubbles.vue'
 import AngleLeft from '../Components/Svg/Normal/AngleLeft.vue'
 import TopBar from '../Components/Bar/TopBar.vue'
 
@@ -36,8 +35,6 @@ Need to test more mobile reactiveness and test
     <section class="page-section">
       <slot />
     </section>
-
-    <Bubbles />
   </main>
 </template>
 
