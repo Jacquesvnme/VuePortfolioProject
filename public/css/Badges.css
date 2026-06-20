@@ -1,39 +1,5 @@
+/* Application and tooling badge colors */
 :root {
-  /* Application, framework and tooling badge colors */
-  --badge-html5-bg: #e34f26;
-  --badge-html5-text: #ffffff;
-
-  --badge-css-bg: #1572b6;
-  --badge-css-text: #ffffff;
-
-  --badge-javascript-bg: #f7df1e;
-  --badge-javascript-text: #1a1a1a;
-
-  --badge-python-bg: #3776ab;
-  --badge-python-text: #ffffff;
-
-  --badge-csharp-bg: #512bd4;
-  --badge-csharp-text: #ffffff;
-
-  --badge-sql-bg: #d32f2f;
-  --badge-sql-text: #ffffff;
-
-  --badge-tsql-bg: #c62828;
-  --badge-tsql-text: #ffffff;
-
-  --badge-markdown-bg: #111111;
-  --badge-markdown-text: #ffffff;
-
-  --badge-nodejs-bg: #539e43;
-  --badge-nodejs-text: #ffffff;
-
-  --badge-json-bg: #000000;
-  --badge-json-text: #ffffff;
-
-  --badge-jquery-bg: #0769ad;
-  --badge-jquery-text: #ffffff;
-
-  /* Application and tooling badge colors */
   --badge-msword-bg: #2b579a;
   --badge-msword-text: #ffffff;
 
@@ -74,6 +40,42 @@
   --badge-netbeans-text: #ffffff;
 }
 
+/* Application, framework and tooling badge colors */
+:root {
+  --badge-html5-bg: #e34f26;
+  --badge-html5-text: #ffffff;
+
+  --badge-css-bg: #1572b6;
+  --badge-css-text: #ffffff;
+
+  --badge-javascript-bg: #f7df1e;
+  --badge-javascript-text: #1a1a1a;
+
+  --badge-python-bg: #3776ab;
+  --badge-python-text: #ffffff;
+
+  --badge-csharp-bg: #512bd4;
+  --badge-csharp-text: #ffffff;
+
+  --badge-sql-bg: #d32f2f;
+  --badge-sql-text: #ffffff;
+
+  --badge-tsql-bg: #c62828;
+  --badge-tsql-text: #ffffff;
+
+  --badge-markdown-bg: #111111;
+  --badge-markdown-text: #ffffff;
+
+  --badge-nodejs-bg: #539e43;
+  --badge-nodejs-text: #ffffff;
+
+  --badge-json-bg: #000000;
+  --badge-json-text: #ffffff;
+
+  --badge-jquery-bg: #0769ad;
+  --badge-jquery-text: #ffffff;
+}
+
 /* Archived badges */
 :root {
   --badge-postgresql-bg: #336791;
@@ -89,6 +91,7 @@
   --badge-nextjs-text: #ffffff;
 }
 
+/* Standard badge styling */
 .badge {
   display: inline-flex;
   align-items: center;
