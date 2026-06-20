@@ -15,6 +15,10 @@ import Markdown from '../Badges/Brands/Markdown.vue'
 import NodeJs from '../Badges/Brands/NodeJs.vue'
 import Json from '../Badges/Brands/Json.vue'
 import Jquery from '../Badges/Brands/Jquery.vue'
+
+/*TODO
+Badges to add: VsiualBasic
+*/
 </script>
 
 <template>
@@ -24,10 +28,10 @@ import Jquery from '../Badges/Brands/Jquery.vue'
     <Javascript />
     <Python />
     <CSharp />
-
     <Sql />
     <TSql />
     <Markdown />
+
     <NodeJs />
     <Json />
     <Jquery />

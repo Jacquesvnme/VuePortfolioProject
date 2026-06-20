@@ -1,22 +1,21 @@
 <script setup>
-import HTML from '../../Svg/Brands/HTML.vue'
+import JSON from '../../Svg/Brands/Json.vue'
 </script>
 
 <template>
-  <div class="badge html-badge display-inline">
-    <HTML class="small-svg-styling" />
-    html
+  <div class="badge json-badge display-inline">
+    <JSON class="small-svg-styling" />
+    json
   </div>
 </template>
 
 <style scoped>
-.html-badge {
-  background-color: var(--badge-html5-bg);
-  color: var(--badge-html5-text);
+.json-badge {
+  background-color: var(--badge-json-bg);
+  color: var(--badge-json-text);
 }
 
 .small-svg-styling {
-  color: var(--badge-html5-text);
-  margin-right: -5px;
+  color: var(--badge-json-text);
 }
 </style>

@@ -1,22 +1,21 @@
 <script setup>
-import HTML from '../../Svg/Brands/HTML.vue'
+import JQuery from '../../Svg/Brands/JQuery.vue'
 </script>
 
 <template>
-  <div class="badge html-badge display-inline">
-    <HTML class="small-svg-styling" />
-    html
+  <div class="badge jquery-badge display-inline">
+    <JQuery class="small-svg-styling" />
+    jquery
   </div>
 </template>
 
 <style scoped>
-.html-badge {
-  background-color: var(--badge-html5-bg);
-  color: var(--badge-html5-text);
+.jquery-badge {
+  background-color: var(--badge-jquery-bg);
+  color: var(--badge-jquery-text);
 }
 
 .small-svg-styling {
-  color: var(--badge-html5-text);
-  margin-right: -5px;
+  color: var(--badge-jquery-text);
 }
 </style>
