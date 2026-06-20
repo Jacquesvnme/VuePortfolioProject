@@ -1,8 +1,8 @@
 <script setup>
-import NextJs from '../badges/archived/NextJs.vue'
-import ExpressJs from '../badges/archived/ExpressJs.vue'
-import PlotlyJs from '../badges/archived/PlotlyJs.vue'
-import PostgreSql from '../badges/archived/PostgreSql.vue'
+import NextJs from '../Badges/Archived/NextJs.vue'
+import ExpressJs from '../Badges/Archived/ExpressJs.vue'
+import PlotlyJs from '../Badges/Archived/PlotlyJs.vue'
+import PostgreSql from '../Badges/Archived/PostgreSql.vue'
 </script>
 
 <template>
