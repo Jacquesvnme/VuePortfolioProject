@@ -4,14 +4,14 @@ import TopBar from '../../Components/Bar/TopBar.vue'
 import SmallSpacer from '../../Components/Spacers/SmallSpacer.vue'
 import ThinDivider from '../../Components/Divider/ThinDivider.vue'
 
-import At from '../../Components/Svg/Normal/At.vue'
-import Github from '../../Components/Svg/Normal/Github.vue'
-import LinkedIn from '../../Components/Svg/Normal/LinkedIn.vue'
-import Link from '../../Components/Svg/Normal/Link.vue'
-import AddressBook from '../../Components/Svg/Normal/AddressBook.vue'
-import Wrench from '../../Components/Svg/Normal/Wrench.vue'
-import User from '../../Components/Svg/Normal/User.vue'
-import AngleRight from '../../Components/Svg/Normal/AngleRight.vue'
+import At from '../../Components/Svg/Functional/At.vue'
+import Github from '../../Components/Svg/Functional/Github.vue'
+import LinkedIn from '../../Components/Svg/Functional/LinkedIn.vue'
+import Link from '../../Components/Svg/Functional/Link.vue'
+import AddressBook from '../../Components/Svg/Functional/AddressBook.vue'
+import Wrench from '../../Components/Svg/Functional/Wrench.vue'
+import User from '../../Components/Svg/Functional/User.vue'
+import AngleRight from '../../Components/Svg/Functional/AngleRight.vue'
 
 /*TODO
 Add a google image of general area in which I live or reside in

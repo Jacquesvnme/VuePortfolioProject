@@ -1,5 +1,5 @@
 <script setup>
-import CSS from '../../Svg/Badges/CSS.vue'
+import CSS from '../../Svg/Brands/CSS.vue'
 </script>
 
 <template>

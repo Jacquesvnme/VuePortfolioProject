@@ -21,9 +21,6 @@
   --badge-tsql-bg: #c62828;
   --badge-tsql-text: #ffffff;
 
-  --badge-postgresql-bg: #336791;
-  --badge-postgresql-text: #ffffff;
-
   --badge-markdown-bg: #111111;
   --badge-markdown-text: #ffffff;
 
@@ -35,15 +32,6 @@
 
   --badge-jquery-bg: #0769ad;
   --badge-jquery-text: #ffffff;
-
-  --badge-plotly-bg: #3f4f75;
-  --badge-plotly-text: #ffffff;
-
-  --badge-express-bg: #000000;
-  --badge-express-text: #ffffff;
-
-  --badge-nextjs-bg: #000000;
-  --badge-nextjs-text: #ffffff;
 
   /* Application and tooling badge colors */
   --badge-msword-bg: #2b579a;
@@ -84,6 +72,21 @@
 
   --badge-netbeans-bg: #1b6ac6;
   --badge-netbeans-text: #ffffff;
+}
+
+/* Archived badges */
+:root {
+  --badge-postgresql-bg: #336791;
+  --badge-postgresql-text: #ffffff;
+
+  --badge-plotly-bg: #3f4f75;
+  --badge-plotly-text: #ffffff;
+
+  --badge-express-bg: #000000;
+  --badge-express-text: #ffffff;
+
+  --badge-nextjs-bg: #000000;
+  --badge-nextjs-text: #ffffff;
 }
 
 .badge {

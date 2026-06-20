@@ -1,11 +1,11 @@
 <script setup>
-import CSharp from '../../Svg/Badges/CSharp.vue'
+import Hashtag from '../../Svg/Functional/Hashtag.vue'
 </script>
 
 <template>
   <div class="badge csharp-badge display-inline">
-    <CSharp class="small-svg-styling" />
-    c#
+    c
+    <Hashtag class="small-svg-styling" />
   </div>
 </template>
 
@@ -17,6 +17,6 @@ import CSharp from '../../Svg/Badges/CSharp.vue'
 
 .small-svg-styling {
   color: var(--badge-csharp-text);
-  margin-right: -5px;
+  margin-left: -5px;
 }
 </style>

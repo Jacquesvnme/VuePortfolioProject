@@ -1,7 +1,7 @@
 <script setup>
 import CompactNav from '../Components/Navigator/CompactNav.vue'
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
-import AngleLeft from '../Components/Svg/Normal/AngleLeft.vue'
+import AngleLeft from '../Components/Svg/Functional/AngleLeft.vue'
 import TopBar from '../Components/Bar/TopBar.vue'
 
 /*TODO

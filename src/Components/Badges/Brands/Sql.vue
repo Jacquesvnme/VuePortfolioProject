@@ -1,5 +1,5 @@
 <script setup>
-import HTML from '../../Svg/Badges/HTML.vue'
+import HTML from '../../Svg/Brands/HTML.vue'
 </script>
 
 <template>

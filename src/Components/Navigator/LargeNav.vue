@@ -1,5 +1,5 @@
 <script setup>
-import AngleRight from '../Svg/Normal/AngleRight.vue'
+import AngleRight from '../Svg/Functional/AngleRight.vue'
 import SmallSpacer from '../Spacers/SmallSpacer.vue'
 
 //TODO I want to add two more things here

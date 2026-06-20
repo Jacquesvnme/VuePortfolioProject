@@ -1,5 +1,5 @@
 <script setup>
-import JavaScript from '../../Svg/Badges/JavaScript.vue'
+import JavaScript from '../../Svg/Brands/JavaScript.vue'
 </script>
 
 <template>

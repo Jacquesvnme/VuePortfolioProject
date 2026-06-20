@@ -1,6 +1,6 @@
 <script setup>
 import ExtraSmallSpacer from '../Spacers/ExtraSmallSpacer.vue'
-import AngleRight from '../Svg/Normal/AngleRight.vue'
+import AngleRight from '../Svg/Functional/AngleRight.vue'
 </script>
 
 <template>

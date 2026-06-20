@@ -1,7 +1,7 @@
 <script setup>
 import LargeNav from '../Components/Navigator/LargeNav.vue'
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
-import AngleLeft from '../Components/Svg/Normal/AngleLeft.vue'
+import AngleLeft from '../Components/Svg/Functional/AngleLeft.vue'
 </script>
 
 <template>
