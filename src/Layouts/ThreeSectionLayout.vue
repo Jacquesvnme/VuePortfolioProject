@@ -2,7 +2,8 @@
 import CompactNav from '../Components/Navigator/CompactNav.vue'
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
 import AngleLeft from '../Components/Svg/Functional/AngleLeft.vue'
-import TopBar from '../Components/Bar/TopBar.vue'
+
+import Notification from '../Components/Notification/Notification.vue'
 
 /*TODO
 I have a few ideas here for this page
@@ -20,9 +21,7 @@ Need to test more mobile reactiveness and test
 </script>
 
 <template>
-  <div class="notification-topbar center-align">
-    <b class="notice">Take Note, this site is still actively in development.</b>
-  </div>
+  <Notification />
 
   <main class="three-section-layout">
     <aside class="page-section">
@@ -43,18 +42,6 @@ Need to test more mobile reactiveness and test
 </template>
 
 <style scoped>
-.notice{
-  color: var(--white);
-  font-size: 0.9rem;
-}
-
-.notification-topbar{
-  width: 100%;
-  height: 25px;
-  border-bottom: 1px solid var(--important-notice-border);
-  background-color: var(--important-notice);
-}
-
 .card {
   height: 100%;
   padding: 1rem !important;

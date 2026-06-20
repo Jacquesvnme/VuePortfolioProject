@@ -1,10 +1,14 @@
 <script setup>
-import LargeNav from '../Components/Navigator/LargeNav.vue'
-import SmallSpacer from '../Components/Spacers/SmallSpacer.vue'
-import AngleLeft from '../Components/Svg/Functional/AngleLeft.vue'
+import LargeNav from '../Components/Navigator/LargeNav.vue';
+import SmallSpacer from '../Components/Spacers/SmallSpacer.vue';
+import AngleLeft from '../Components/Svg/Functional/AngleLeft.vue';
+
+import Notification from '../Components/Notification/Notification.vue';
 </script>
 
 <template>
+  <Notification />
+
   <main class="dashboard-page">
     <section class="card">
       <div class="panel-header-inline">
