@@ -12,19 +12,6 @@ import AddressBook from '../../Components/Svg/Functional/AddressBook.vue'
 import Wrench from '../../Components/Svg/Functional/Wrench.vue'
 import User from '../../Components/Svg/Functional/User.vue'
 import AngleRight from '../../Components/Svg/Functional/AngleRight.vue'
-
-/*TODO
-Add a google image of general area in which I live or reside in
-
-./GoogleAddress.png
-
-TODO
-Add the languages I know and speak
-
-- Langueges
-  - English
-  - Afrikaans
-*/
 </script>
 
 <template>
