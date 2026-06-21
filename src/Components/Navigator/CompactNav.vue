@@ -39,6 +39,7 @@ import AngleRight from '../Svg/Functional/AngleRight.vue'
   display: flex;
   align-items: center;
   overflow: hidden;
+  flex-direction: row !important;
 }
 
 .link {

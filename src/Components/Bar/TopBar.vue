@@ -36,6 +36,7 @@ defineProps({
   padding: 12px !important;
   display: flex;
   align-items: center;
+  flex-direction: row !important;
 }
 
 .trailing-spaces {
