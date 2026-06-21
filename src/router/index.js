@@ -7,6 +7,8 @@ import Details from '../Pages/PortfolioSections/Details.vue'
 import Skills from '../Pages/PortfolioSections/Skills.vue'
 import AcademicHistory from '../Pages/PortfolioSections/AcademicHistory.vue'
 
+import NotFound from '../Pages/NotFound.vue'
+
 const routes = [
   {
     path: '/',
@@ -38,6 +40,11 @@ const routes = [
     name: 'AboutMe',
     component: AboutMe,
   },
+  {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFound
+    }
 ]
 
 const router = createRouter({
