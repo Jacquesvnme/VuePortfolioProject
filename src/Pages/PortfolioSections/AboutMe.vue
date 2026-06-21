@@ -138,14 +138,14 @@ import AngleRight from '../../Components/Svg/Functional/AngleRight.vue'
       <AddressBook class="medium-svg-styling" />
       <p class="eyebrow display-inline">Current location</p>
       <div class="current-location">
-        <img
-          src="/Images/GoogleAddress.png"
-          alt="Google Maps image of my current location"
-          class="location-image"
-          loading="lazy"
-          decoding="async"
-        />
+        <iframe class="location-image" alt="OpenStreetMap image of my current location"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=28.20499420166016%2C-26.26062949435368%2C28.39845657348633%2C-26.120609901056977&amp;layer=hot">
+        </iframe>
       </div>
+      <small class="center-align">
+        <a href="https://www.openstreetmap.org/?#map=13/-26.19064/28.30173&amp;layers=H" class="link normal-color">View Larger Map</a>
+      </small>
+
     </div>
   </ThreeSectionLayout>
 </template>
@@ -193,8 +193,13 @@ import AngleRight from '../../Components/Svg/Functional/AngleRight.vue'
 .location-image {
   width: min(100%, 720px);
   height: auto;
+  min-height: 300px;
   border-radius: 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   object-fit: cover;
+}
+
+.normal-color {
+  color: var(--secondary-color) !important;
 }
 </style>
