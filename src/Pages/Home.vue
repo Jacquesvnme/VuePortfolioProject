@@ -14,6 +14,10 @@
       </RouterLink>
     </section>
   </main>
+
+  <div class="legal-notice center-align">
+    This site does not collect personal information.
+  </div>
 </template>
 
 <style scoped>
@@ -29,5 +33,9 @@
 
 .max-width {
   max-width: 58ch;
+}
+
+.legal-notice {
+  margin-top: -2rem;
 }
 </style>

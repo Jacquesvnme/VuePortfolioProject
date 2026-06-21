@@ -1,9 +1,11 @@
 <script setup>
 import LargeNav from '../Components/Navigator/LargeNav.vue';
 import SmallSpacer from '../Components/Spacers/SmallSpacer.vue';
+import ThinDivider from '../Components/Divider/ThinDivider.vue';
 import AngleLeft from '../Components/Svg/Functional/AngleLeft.vue';
 
 import Notification from '../Components/Notification/Notification.vue';
+import License from '../Components/License/License.vue';
 </script>
 
 <template>
@@ -25,10 +27,19 @@ import Notification from '../Components/Notification/Notification.vue';
 
       <LargeNav />
     </section>
+  
+    <ThinDivider class="limit-divider"/>
+    
+    <License />
   </main>
 </template>
 
 <style scoped>
+.limit-divider{
+  max-width: 820px;
+  margin: 2rem auto;
+}
+
 /* Adding to the already existing styling */
 .card {
   max-width: 820px;

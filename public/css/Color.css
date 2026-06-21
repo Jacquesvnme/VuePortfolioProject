@@ -16,6 +16,8 @@
   --important-notice: #6b3382;
   --important-notice-border: #a855f7;
 
+  --legal-notice: #666;
+
   /* Vuetify background color override */
   --app-background:
     radial-gradient(circle at top right, rgba(52, 152, 219, 0.25), transparent 45%),
