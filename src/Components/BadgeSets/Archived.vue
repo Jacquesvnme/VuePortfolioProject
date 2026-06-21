@@ -17,6 +17,7 @@ import PostgreSql from '../Badges/Archived/PostgreSql.vue'
 <style scoped>
 .badge-set {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 </style>

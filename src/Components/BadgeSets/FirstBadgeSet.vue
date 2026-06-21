@@ -19,6 +19,10 @@ import Jquery from '../Badges/Brands/Jquery.vue'
 /*TODO
 Badges to add: VsiualBasic
 */
+
+/*TODO
+make bagdes small on mobile for better view
+*/
 </script>
 
 <template>
@@ -41,6 +45,7 @@ Badges to add: VsiualBasic
 <style scoped>
 .badge-set {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 </style>

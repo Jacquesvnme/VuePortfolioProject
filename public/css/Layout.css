@@ -27,6 +27,9 @@ Once site is out of development, remove the notification component and remove - 
   min-height: calc(100vh - 2rem);
   padding: 1rem;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* Page card like styling for sections */
@@ -49,5 +52,7 @@ Once site is out of development, remove the notification component and remove - 
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 -1px 0 rgba(255, 255, 255, 0.05);
   position: relative;
-  overflow: hidden;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
