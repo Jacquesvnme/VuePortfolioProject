@@ -1,3 +1,5 @@
+<!-- TODO Fix this for mobile -->
+
 <template>
   <div class="wakatime-container">
     <img
