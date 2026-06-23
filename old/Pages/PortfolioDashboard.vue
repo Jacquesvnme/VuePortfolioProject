@@ -1,11 +1,11 @@
 <script setup>
-import LargeNav from '../Components/Navigator/LargeNav.vue';
-import SmallSpacer from '../Components/Spacers/SmallSpacer.vue';
-import ThinDivider from '../Components/Divider/ThinDivider.vue';
-import AngleLeft from '../Components/Svg/Functional/AngleLeft.vue';
+import LargeNav from '../../src/Components/Navigator/LargeNav.vue';
+import SmallSpacer from '../../src/Components/Spacers/SmallSpacer.vue';
+import ThinDivider from '../../src/Components/Divider/ThinDivider.vue';
+import AngleLeft from '../../src/Components/Svg/Functional/AngleLeft.vue';
 
-import Notification from '../Components/Notification/Notification.vue';
-import License from '../Components/License/License.vue';
+import Notification from '../../src/Components/Notification/Notification.vue';
+import License from '../../src/Components/License/License.vue';
 </script>
 
 <template>

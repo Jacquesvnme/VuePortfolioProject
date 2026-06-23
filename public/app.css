@@ -13,16 +13,49 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--app-background);
-  color: var(--dark-font);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 160% 160%;
+  color: var(--secondary-color);
+  overflow-x: hidden;
+  animation: app-background-drift 22s ease-in-out infinite alternate;
 }
 
 /* Vuetify overrides for background colors */
 .app-container {
-  background: var(--app-background) !important;
+  background: transparent !important;
+  color: var(--secondary-color);
   min-height: 100vh;
 }
 
 .main-container {
   background: transparent !important;
   padding: 0;
+}
+
+@keyframes app-background-drift {
+  0% {
+    background-position:
+      0% 0%,
+      100% 8%,
+      92% 92%,
+      8% 100%,
+      0% 0%;
+  }
+  50% {
+    background-position:
+      10% 14%,
+      84% 4%,
+      76% 84%,
+      18% 88%,
+      50% 42%;
+  }
+  100% {
+    background-position:
+      18% 8%,
+      72% 16%,
+      84% 72%,
+      6% 74%,
+      100% 100%;
+  }
 }

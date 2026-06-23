@@ -1,5 +1,5 @@
 <script setup>
-import ThreeSectionLayout from '../../Layouts/ThreeSectionLayout.vue'
+import ThreeSectionLayout from '../../../old/Layouts/ThreeSectionLayout.vue'
 import TopBar from '../../Components/Bar/TopBar.vue'
 import SmallSpacer from '../../Components/Spacers/SmallSpacer.vue'
 </script>

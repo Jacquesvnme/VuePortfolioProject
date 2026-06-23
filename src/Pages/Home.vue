@@ -1,41 +1,74 @@
 <template>
-  <main class="page">
-    <section>
-      <p class="eyebrow">Portfolio</p>
-      <h1>Jacques Van Niekerk</h1>
-      <p class="subtitle">View my work, projects and interests.</p>
-
-      <div style="margin-top: 20px">
-        <b class="subtitle">Take Note, this site is still actively in development.</b>
+  <div class="main-page">
+    <div class="TopBar">
+      <h1 class="headline word-break">Portfolio Website</h1>
+      <div>
+        <ul class="custom-nav-list display-inline">
+          <li>Home</li>
+          <li>About</li>
+          <li>Skills & Academics</li>
+          <li>Projects</li>
+          <li>Blog</li>
+          <li>Privacy & Terms</li>
+          <li>Contact</li>
+        </ul>
       </div>
+    </div>
+    <div class="main-content">
+      Welcome to my portfolio website
 
-      <RouterLink :to="'/Portfolio-Dashboard'">
-        <button class="button" type="button">View My Work</button>
-      </RouterLink>
-    </section>
-  </main>
+      I'm Jacques Van Niekerk
+      A Full Stack Developer
 
-  <div class="legal-notice center-align">
-    This site does not collect personal information.
+      Check out my site to see all the different projects I've worked on, my skills and experience, and more about me as a person.
+    </div>
   </div>
 </template>
 
 <style scoped>
-.page {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 2rem;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 10;
+.main-page {
+  
 }
 
-.max-width {
-  max-width: 58ch;
+.TopBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 80px;
 }
 
-.legal-notice {
-  margin-top: -2rem;
+.main-content {
+  padding: 1rem;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline{
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+
+.custom-nav-list {
+  list-style: none;
+  padding: 0;
+  margin-right: 1rem;
+}
+
+
+.custom-nav-list li {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.display-inline {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.word-break {
+  word-break: break-word;
 }
 </style>

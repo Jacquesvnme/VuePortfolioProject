@@ -1,25 +1,21 @@
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --tertiary-color: #e74c3c;
+  --primary-color: #1f252b;
+  --secondary-color: #63f2a5;
+  --tertiary-color: #67d7ff;
 
-  --dark-gray: #2c3e50;
-  --dark-font: #ecf0f1;
+  --dark-gray: #111417;
+  --dark-font: #8ef2ae;
 
-  --background-animation-primary: #1abc9c;
-  --background-animation-light: rgba(26, 188, 156, 0.3);
-  --background-animation-dark: rgba(26, 188, 156, 0.08);
+  --black: #0b0d10;
+  --white: #ecf7ef;
 
-  --black: #12202e;
-  --white: #ecf0f1;
-
-  --important-notice: #6b3382;
-  --important-notice-border: #a855f7;
-
-  --legal-notice: #666;
+  --legal-notice: #7b8f88;
 
   /* Vuetify background color override */
   --app-background:
-    radial-gradient(circle at top right, rgba(52, 152, 219, 0.25), transparent 45%),
-    linear-gradient(135deg, #243447 0%, #1b2836 100%);
+    radial-gradient(circle at 18% 22%, rgba(99, 242, 165, 0.14), transparent 24%),
+    radial-gradient(circle at 80% 18%, rgba(103, 215, 255, 0.11), transparent 22%),
+    radial-gradient(circle at 78% 78%, rgba(99, 242, 165, 0.12), transparent 24%),
+    radial-gradient(circle at 18% 80%, rgba(145, 111, 255, 0.08), transparent 23%),
+    linear-gradient(135deg, #0f1113 0%, #171a1f 52%, #0b0d10 100%);
 }
