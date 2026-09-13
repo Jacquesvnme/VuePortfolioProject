@@ -15,5 +15,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    // Vite rejects all Windows paths containing "~" while fs.strict is enabled,
+    // including this project's own "~ My Files" directory.
+    fs: {
+      strict: false,
+    },
+  },
   base: '/'
 })
