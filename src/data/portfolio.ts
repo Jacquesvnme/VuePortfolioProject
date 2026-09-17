@@ -1,7 +1,9 @@
 import type {
   AboutFact,
   CertificateEntry,
+  ContactDetails,
   EducationEntry,
+  HomeDetails,
   InterestGroup,
   LegalClause,
   NavigationItem,
@@ -17,6 +19,11 @@ export const navigation: NavigationItem[] = [
   { label: 'Privacy & Terms', id: 'privacy-and-terms' },
   { label: 'Contact', id: 'contact' },
 ]
+
+export const homeDetails: HomeDetails = {
+  githubUrl: 'https://github.com/Jacquesvnme',
+  location: 'South Africa · Gauteng',
+}
 
 export const projects: Project[] = [
   {
@@ -227,12 +234,16 @@ export const legalClauses: LegalClause[] = [
   },
 ]
 
-export const contactDetails = {
-  email: 'hello@example.com',
+export const contactDetails: ContactDetails = {
+  email: 'jacquesvnme@email.com',
+  showPhone: false,
   phone: '+27 00 000 0000',
-  location: 'General location, South Africa',
-  availability: 'Open to thoughtful opportunities',
-  githubUrl: 'https://github.com/example',
-  linkedinUrl: 'https://www.linkedin.com/in/example',
+  location: 'South Africa · Gauteng',
+  availability: [
+    { title: 'Full-time roles', status: 'unavailable' },
+    { title: 'Freelance projects', status: 'available' },
+  ],
+  githubUrl: 'https://github.com/Jacquesvnme',
+  linkedinUrl: 'https://www.linkedin.com/in/jacques-van-niekerk-231b872ba',
   cvPath: '/dummy-cv.txt',
 }

@@ -73,7 +73,7 @@ onBeforeUnmount(() => {
 
   <header class="site-header glass-panel">
     <a class="brand brand-panel" href="#home" aria-label="Portfolio home" @click="closeMenu">
-      <span class="brand-name">Your Name</span>
+      <span class="brand-name">Jacques Van Niekerk</span>
       <span class="brand-subtitle">Portfolio Website</span>
     </a>
 
@@ -127,8 +127,8 @@ onBeforeUnmount(() => {
   <main id="main-content" class="site-main"><slot /></main>
 
   <footer ref="footerElement" class="site-footer glass-panel">
-    <p>© {{ currentYear }} Your Name</p>
-    <p class="footer-note">Portfolio Website · Built with care</p>
+    <p>© {{ currentYear }} · Jacques Van Niekerk</p>
+    <p class="footer-note">Portfolio Website · Built with Codex</p>
     <a href="#home">Back to top <ArrowUp aria-hidden="true" /></a>
   </footer>
 

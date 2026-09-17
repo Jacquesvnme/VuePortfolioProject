@@ -3,6 +3,27 @@ export interface NavigationItem {
   id: string
 }
 
+export interface HomeDetails {
+  githubUrl: string
+  location: string
+}
+
+export interface AvailabilityEntry {
+  title: string
+  status: string
+}
+
+export interface ContactDetails {
+  email: string
+  showPhone: boolean
+  phone: string
+  location: string
+  availability: AvailabilityEntry[]
+  githubUrl: string
+  linkedinUrl: string
+  cvPath: string
+}
+
 export type ProjectStatus = 'Completed' | 'In Progress' | 'Archived'
 
 export interface Project {

@@ -5,6 +5,12 @@ import GithubIcon from '@/components/icons/GithubIcon.vue'
 import LinkedinIcon from '@/components/icons/LinkedinIcon.vue'
 import { Button } from '@/components/ui/button'
 import { contactDetails } from '@/data/portfolio'
+
+const availabilityBadgeClass = (status: string) => ({
+  'availability-badge-available': status === 'available',
+  'availability-badge-unavailable': status === 'unavailable',
+  'availability-badge-neutral': status !== 'available' && status !== 'unavailable',
+})
 </script>
 
 <template>
@@ -15,10 +21,7 @@ import { contactDetails } from '@/data/portfolio'
         <span>Have something</span>
         <span>In mind?</span>
       </h2>
-      <p>
-        The contact details below are dummy content. Replace them when you are ready to make the
-        portfolio public.
-      </p>
+      <p>Please make use of the below contact information.</p>
       <div class="contact-email-row">
         <a class="contact-email" :href="`mailto:${contactDetails.email}`"
           ><Mail aria-hidden="true" /> {{ contactDetails.email }}</a
@@ -44,7 +47,7 @@ import { contactDetails } from '@/data/portfolio'
       >
     </div>
     <dl class="contact-details glass-panel">
-      <div>
+      <div v-if="contactDetails.showPhone">
         <dt><Phone aria-hidden="true" /> Phone</dt>
         <dd>
           {{ contactDetails.phone }}
@@ -58,13 +61,14 @@ import { contactDetails } from '@/data/portfolio'
       <div>
         <dt><BriefcaseBusiness aria-hidden="true" /> Availability</dt>
         <dd class="availability-statuses">
-          <span class="availability-badge availability-badge-unavailable">
+          <span
+            v-for="availability in contactDetails.availability"
+            :key="availability.title"
+            class="availability-badge"
+            :class="availabilityBadgeClass(availability.status)"
+          >
             <span class="availability-dot" aria-hidden="true" />
-            Full-time roles — unavailable
-          </span>
-          <span class="availability-badge availability-badge-available">
-            <span class="availability-dot" aria-hidden="true" />
-            Freelance projects — available
+            {{ availability.title }} — {{ availability.status }}
           </span>
         </dd>
       </div>
