@@ -1,0 +1,72 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+dl,
+dd {
+  margin: 0;
+}
+
+.eyebrow,
+.row-number,
+.project-number,
+.legal-number,
+.fact-grid dt {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.hero-title,
+.display-title {
+  max-width: 13ch;
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 10.5vw, 10rem);
+}
+
+.hero-title span {
+  color: var(--muted-foreground);
+}
+
+.display-title {
+  font-size: clamp(3.75rem, 9vw, 8rem);
+}
+
+.section-intro,
+.hero-copy {
+  max-width: 42rem;
+  color: var(--muted-foreground);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.75;
+}
+
+.row-title,
+.subsection-heading h3 {
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  font-weight: 520;
+  letter-spacing: -0.035em;
+}
+
+.row-description {
+  max-width: 38rem;
+  margin-top: 0.65rem;
+  color: var(--muted-foreground);
+  line-height: 1.65;
+}

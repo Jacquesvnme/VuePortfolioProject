@@ -1,0 +1,25 @@
+svg {
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 1.7;
+}
+
+.story-header > svg,
+.preference-card > svg,
+.interest-icon svg {
+  color: var(--primary);
+}
+
+.contact-email svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.theme-toggle svg,
+.menu-button svg,
+.back-to-top svg,
+.icon-link svg,
+.dialog-close svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
