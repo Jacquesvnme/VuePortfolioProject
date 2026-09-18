@@ -564,7 +564,7 @@ export const contactDetails: ContactDetails = {
   cv: [
     {
       path: '/dummy-cv.txt',
-      show: true,
+      show: false,
     },
   ],
   location: [
