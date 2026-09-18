@@ -6,6 +6,15 @@ import LinkedinIcon from '@/components/icons/LinkedinIcon.vue'
 import { Button } from '@/components/ui/button'
 import { contactDetails } from '@/data/portfolio'
 
+const visibleGithubLinks = contactDetails.github.filter((entry) => entry.show)
+const visibleLinkedinLinks = contactDetails.linkedin.filter((entry) => entry.show)
+const visibleCvs = contactDetails.cv.filter((entry) => entry.show)
+const visibleLocations = contactDetails.location.filter((entry) => entry.show)
+const visiblePhones = contactDetails.phone.filter((entry) => entry.show)
+const visibleEmails = contactDetails.email.filter((entry) => entry.show)
+const hasVisibleContactLinks =
+  visibleGithubLinks.length > 0 || visibleLinkedinLinks.length > 0 || visibleCvs.length > 0
+
 const availabilityBadgeClass = (status: string) => ({
   'availability-badge-available': status === 'available',
   'availability-badge-unavailable': status === 'unavailable',
@@ -22,55 +31,80 @@ const availabilityBadgeClass = (status: string) => ({
         <span>In mind?</span>
       </h2>
       <p>Please make use of the below contact information.</p>
-      <div class="contact-email-row">
-        <a class="contact-email" :href="`mailto:${contactDetails.email}`"
-          ><Mail aria-hidden="true" /> {{ contactDetails.email }}</a
+      <div v-for="entry in visibleEmails" :key="entry.email" class="contact-email-row">
+        <a class="contact-email" :href="`mailto:${entry.email}`"
+          ><Mail aria-hidden="true" /> {{ entry.email }}</a
         >
-        <CopyButton :value="contactDetails.email" label="Copy email" />
+        <CopyButton :value="entry.email" label="Copy email" />
       </div>
     </div>
-    <div class="contact-links">
-      <Button as-child variant="outline"
-        ><a :href="contactDetails.linkedinUrl" target="_blank" rel="noopener noreferrer"
+    <div v-if="hasVisibleContactLinks" class="contact-links">
+      <Button
+        v-for="entry in visibleLinkedinLinks"
+        :key="entry.url"
+        as-child
+        variant="outline"
+        size="lg"
+        class="hero-secondary-action"
+        ><a :href="entry.url" target="_blank" rel="noopener noreferrer"
           ><LinkedinIcon aria-hidden="true" /> LinkedIn</a
         ></Button
       >
-      <Button as-child variant="outline"
-        ><a :href="contactDetails.githubUrl" target="_blank" rel="noopener noreferrer"
+      <Button
+        v-for="entry in visibleGithubLinks"
+        :key="entry.url"
+        as-child
+        variant="outline"
+        size="lg"
+        class="hero-secondary-action"
+        ><a :href="entry.url" target="_blank" rel="noopener noreferrer"
           ><GithubIcon aria-hidden="true" /> GitHub</a
         ></Button
       >
-      <Button as-child variant="outline"
-        ><a :href="contactDetails.cvPath" download
-          ><Download aria-hidden="true" /> Download CV</a
-        ></Button
+      <Button
+        v-for="entry in visibleCvs"
+        :key="entry.path"
+        as-child
+        variant="outline"
+        size="lg"
+        class="hero-secondary-action"
+        ><a :href="entry.path" download><Download aria-hidden="true" /> Download CV</a></Button
       >
     </div>
     <dl class="contact-details glass-panel">
-      <div v-if="contactDetails.showPhone">
-        <dt><Phone aria-hidden="true" /> Phone</dt>
-        <dd>
-          {{ contactDetails.phone }}
-          <CopyButton :value="contactDetails.phone" label="Copy phone number" />
-        </dd>
+      <div v-for="entry in visiblePhones" :key="entry.phone">
+        <Phone class="contact-detail-icon" aria-hidden="true" />
+        <div class="contact-detail-content">
+          <dt>Phone</dt>
+          <dd>
+            {{ entry.phone }}
+            <CopyButton :value="entry.phone" label="Copy phone number" />
+          </dd>
+        </div>
+      </div>
+      <div v-for="entry in visibleLocations" :key="entry.location">
+        <MapPin class="contact-detail-icon" aria-hidden="true" />
+        <div class="contact-detail-content">
+          <dt>Location</dt>
+          <dd>{{ entry.location }}</dd>
+        </div>
       </div>
       <div>
-        <dt><MapPin aria-hidden="true" /> Location</dt>
-        <dd>{{ contactDetails.location }}</dd>
-      </div>
-      <div>
-        <dt><BriefcaseBusiness aria-hidden="true" /> Availability</dt>
-        <dd class="availability-statuses">
-          <span
-            v-for="availability in contactDetails.availability"
-            :key="availability.title"
-            class="availability-badge"
-            :class="availabilityBadgeClass(availability.status)"
-          >
-            <span class="availability-dot" aria-hidden="true" />
-            {{ availability.title }} — {{ availability.status }}
-          </span>
-        </dd>
+        <BriefcaseBusiness class="contact-detail-icon" aria-hidden="true" />
+        <div class="contact-detail-content">
+          <dt>Availability</dt>
+          <dd class="availability-statuses">
+            <span
+              v-for="availability in contactDetails.availability"
+              :key="availability.title"
+              class="availability-badge"
+              :class="availabilityBadgeClass(availability.status)"
+            >
+              <span class="availability-dot" aria-hidden="true" />
+              {{ availability.title }} — {{ availability.status }}
+            </span>
+          </dd>
+        </div>
       </div>
     </dl>
   </section>

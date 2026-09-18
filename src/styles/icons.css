@@ -5,7 +5,6 @@ svg {
 }
 
 .story-header > svg,
-.preference-card > svg,
 .interest-icon svg {
   color: var(--primary);
 }

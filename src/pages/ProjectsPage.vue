@@ -9,7 +9,7 @@ import { projects } from '@/data/portfolio'
     <SectionHeading
       eyebrow="Selected work"
       title="Projects"
-      description="A single-column archive of dummy projects. Each entry grows vertically and opens into a focused details window."
+      description="All of my personal projects"
     />
     <div class="project-list content-panel glass-panel">
       <ProjectEntry

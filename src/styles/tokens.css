@@ -31,6 +31,7 @@
   --brand-subtitle-hover: oklch(0.43 0.17 142);
   --status-in-progress: oklch(0.67 0.18 55);
   --status-archived: oklch(0.55 0.2 305);
+  --status-still-to-come: oklch(0.55 0.14 210);
   --back-to-top-foreground: oklch(0.99 0.004 145);
   --radius: 0.8rem;
   --page-width: 92rem;
@@ -74,6 +75,7 @@
   --brand-subtitle-hover: oklch(0.84 0.19 145);
   --status-in-progress: oklch(0.78 0.17 65);
   --status-archived: oklch(0.72 0.17 305);
+  --status-still-to-come: oklch(0.78 0.14 210);
   --back-to-top-foreground: oklch(0.12 0.02 145);
   color-scheme: dark;
 }

@@ -3,7 +3,8 @@ import SectionHeading from '@/components/common/SectionHeading.vue'
 import CertificateEntry from '@/components/skills/CertificateEntry.vue'
 import EducationEntry from '@/components/skills/EducationEntry.vue'
 import SkillGroup from '@/components/skills/SkillGroup.vue'
-import { certificates, education, skillGroups } from '@/data/portfolio'
+import WorkExperienceEntry from '@/components/skills/WorkExperienceEntry.vue'
+import { certificates, education, skillGroups, workExperience } from '@/data/portfolio'
 </script>
 
 <template>
@@ -15,7 +16,7 @@ import { certificates, education, skillGroups } from '@/data/portfolio'
     <SectionHeading
       eyebrow="Capabilities & history"
       title="Skills & Academics"
-      description="A badge-led overview of dummy technical skills, followed by formal education and certificates."
+      description="Information about my academic history and skills"
     />
     <div class="subsection">
       <div class="subsection-heading">
@@ -33,7 +34,20 @@ import { certificates, education, skillGroups } from '@/data/portfolio'
     </div>
     <div class="subsection">
       <div class="subsection-heading">
-        <p class="eyebrow">02 / Education</p>
+        <p class="eyebrow">02 / Work experience</p>
+        <h3>Professional experience</h3>
+      </div>
+      <div class="experience-list">
+        <WorkExperienceEntry
+          v-for="experience in workExperience"
+          :key="experience.id"
+          :experience="experience"
+        />
+      </div>
+    </div>
+    <div class="subsection">
+      <div class="subsection-heading">
+        <p class="eyebrow">03 / Education</p>
         <h3>Formal education</h3>
       </div>
       <div class="editorial-list content-panel glass-panel">
@@ -47,15 +61,21 @@ import { certificates, education, skillGroups } from '@/data/portfolio'
     </div>
     <div class="subsection">
       <div class="subsection-heading">
-        <p class="eyebrow">03 / Certificates</p>
+        <p class="eyebrow">04 / Certificates</p>
         <h3>Continued learning</h3>
       </div>
-      <div class="certificate-grid content-panel glass-panel">
+      <div
+        class="certificate-grid content-panel glass-panel"
+        :data-desktop-placeholders="(3 - (certificates.length % 3)) % 3"
+        :data-tablet-placeholders="certificates.length % 2"
+      >
         <CertificateEntry
-          v-for="certificate in certificates"
-          :key="certificate.title"
+          v-for="(certificate, index) in certificates"
+          :key="`${certificate.title}-${certificate.issuer}-${certificate.year}-${index}`"
           :certificate="certificate"
         />
+        <div class="certificate-placeholder certificate-placeholder-primary" aria-hidden="true" />
+        <div class="certificate-placeholder certificate-placeholder-secondary" aria-hidden="true" />
       </div>
     </div>
   </section>

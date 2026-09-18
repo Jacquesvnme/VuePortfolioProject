@@ -74,7 +74,14 @@ onBeforeUnmount(() => {
   <header class="site-header glass-panel">
     <a class="brand brand-panel" href="#home" aria-label="Portfolio home" @click="closeMenu">
       <span class="brand-name">Jacques Van Niekerk</span>
-      <span class="brand-subtitle">Portfolio Website</span>
+      <span class="brand-meta">
+        <span class="brand-subtitle">Portfolio Website</span>
+        <span class="brand-meta-separator" aria-hidden="true" />
+        <span class="brand-development-status">
+          <span class="brand-development-dot" aria-hidden="true" />
+          In development
+        </span>
+      </span>
     </a>
 
     <nav class="desktop-navigation" aria-label="Primary navigation">

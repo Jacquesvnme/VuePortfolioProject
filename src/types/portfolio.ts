@@ -6,6 +6,7 @@ export interface NavigationItem {
 export interface HomeDetails {
   githubUrl: string
   location: string
+  showWebsiteWarning: boolean
 }
 
 export interface AvailabilityEntry {
@@ -13,18 +14,42 @@ export interface AvailabilityEntry {
   status: string
 }
 
-export interface ContactDetails {
-  email: string
-  showPhone: boolean
-  phone: string
-  location: string
-  availability: AvailabilityEntry[]
-  githubUrl: string
-  linkedinUrl: string
-  cvPath: string
+export interface VisibleContactUrl {
+  url: string
+  show: boolean
 }
 
-export type ProjectStatus = 'Completed' | 'In Progress' | 'Archived'
+export interface VisibleContactPath {
+  path: string
+  show: boolean
+}
+
+export interface VisibleContactLocation {
+  location: string
+  show: boolean
+}
+
+export interface VisibleContactPhone {
+  phone: string
+  show: boolean
+}
+
+export interface VisibleContactEmail {
+  email: string
+  show: boolean
+}
+
+export interface ContactDetails {
+  availability: AvailabilityEntry[]
+  github: VisibleContactUrl[]
+  linkedin: VisibleContactUrl[]
+  cv: VisibleContactPath[]
+  location: VisibleContactLocation[]
+  phone: VisibleContactPhone[]
+  email: VisibleContactEmail[]
+}
+
+export type ProjectStatus = 'Completed' | 'In Progress' | 'Archived' | 'Still to come'
 
 export interface Project {
   id: string
@@ -50,6 +75,30 @@ export interface EducationEntry {
   description: string
 }
 
+export interface ExperienceLink {
+  name: string
+  url: string
+}
+
+export interface JobRole {
+  id: string
+  title: string
+  startDate: string
+  endDate: string | null
+  descriptions: string[] | null
+  tags?: string[]
+  links?: ExperienceLink[]
+}
+
+export interface WorkExperience {
+  id: string
+  company: string
+  companyInitial?: string
+  location?: string
+  links?: ExperienceLink[]
+  roles: JobRole[]
+}
+
 export interface CertificateEntry {
   title: string
   issuer: string
@@ -57,26 +106,44 @@ export interface CertificateEntry {
   credentialUrl: string
 }
 
-export interface AboutFact {
+export interface AboutFactEntry {
   label: string
   value: string
 }
 
+export interface AboutFact {
+  story: string[]
+  entries: AboutFactEntry[]
+}
+
+export interface InterestLink {
+  name: string
+  url: string
+}
+
 export interface InterestEntry {
   title: string
-  description: string
+  description: string[]
   tags?: string[]
+  links?: InterestLink[] | null
+  hoursPlayed?: number | null
 }
 
 export interface InterestGroup {
   id: string
   title: string
   description: string
-  icon: 'user' | 'games' | 'music' | 'heart'
+  icon: 'user' | 'code' | 'games' | 'music' | 'manga' | 'anime'
   entries: InterestEntry[]
+}
+
+export interface LegalLink {
+  name: string
+  url: string
 }
 
 export interface LegalClause {
   title: string
   paragraphs: string[]
+  link?: LegalLink[] | null
 }

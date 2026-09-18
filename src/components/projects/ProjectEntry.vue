@@ -18,6 +18,7 @@ const statusClasses: Record<Project['status'], string> = {
   Completed: 'status-completed',
   'In Progress': 'status-in-progress',
   Archived: 'status-archived',
+  'Still to come': 'status-still-to-come',
 }
 </script>
 
@@ -39,7 +40,9 @@ const statusClasses: Record<Project['status'], string> = {
     <div class="project-actions">
       <Dialog>
         <DialogTrigger as-child>
-          <Button variant="outline">View details <ArrowUpRight aria-hidden="true" /></Button>
+          <Button size="lg" class="primary-cta hero-primary-action project-details-action">
+            View details <ArrowUpRight aria-hidden="true" />
+          </Button>
         </DialogTrigger>
         <DialogContent>
           <p class="eyebrow">Project {{ String(index + 1).padStart(2, '0') }}</p>

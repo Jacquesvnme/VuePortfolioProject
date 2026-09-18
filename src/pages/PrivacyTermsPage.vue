@@ -9,7 +9,7 @@ import { legalClauses } from '@/data/portfolio'
     <SectionHeading
       eyebrow="The fine print"
       title="Privacy & Terms"
-      description="Clear placeholder language for how this portfolio handles information, links, content, and availability."
+      description="Privacy & Terms of the website."
     />
     <div class="legal-meta content-panel glass-panel">
       <p><span>Last updated</span> Month 20XX</p>
@@ -30,8 +30,5 @@ import { legalClauses } from '@/data/portfolio'
         :index="index"
       />
     </div>
-    <p class="legal-notice">
-      This is dummy content and is not legal advice. Replace it before deployment.
-    </p>
   </section>
 </template>

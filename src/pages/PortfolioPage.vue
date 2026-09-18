@@ -13,14 +13,14 @@ import SkillsAcademicsPage from '@/pages/SkillsAcademicsPage.vue'
   <PortfolioLayout>
     <HomePage />
     <ChapterDivider number="02" total="06" />
-    <AboutPage />
+    <ProjectsPage />
     <ChapterDivider number="03" total="06" />
     <SkillsAcademicsPage />
     <ChapterDivider number="04" total="06" />
-    <ProjectsPage />
+    <AboutPage />
     <ChapterDivider number="05" total="06" />
-    <PrivacyTermsPage />
-    <ChapterDivider number="06" total="06" />
     <ContactPage />
+    <ChapterDivider number="06" total="06" />
+    <PrivacyTermsPage />
   </PortfolioLayout>
 </template>

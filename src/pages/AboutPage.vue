@@ -1,8 +1,15 @@
 <script setup lang="ts">
-import { Heart, UserRound, X } from '@lucide/vue'
+import { UserRound } from '@lucide/vue'
 import InterestGroup from '@/components/about/InterestGroup.vue'
 import SectionHeading from '@/components/common/SectionHeading.vue'
 import { aboutFacts, interestGroups } from '@/data/portfolio'
+
+const primaryInterestGroups = interestGroups.filter((group) =>
+  ['personal-background', 'coding'].includes(group.id),
+)
+const compactInterestGroups = interestGroups.filter((group) =>
+  ['games', 'music', 'manga', 'anime'].includes(group.id),
+)
 </script>
 
 <template>
@@ -10,7 +17,7 @@ import { aboutFacts, interestGroups } from '@/data/portfolio'
     <SectionHeading
       eyebrow="Beyond the code"
       title="About"
-      description="A personal, expandable portrait made from repeatable sections and list entries. Everything below is placeholder content."
+      description="Personal information about myself."
     />
     <article class="story-panel glass-panel">
       <header class="story-header">
@@ -19,40 +26,25 @@ import { aboutFacts, interestGroups } from '@/data/portfolio'
         <span>Main introduction</span>
       </header>
       <div class="story-copy">
-        <p>
-          Primary dummy paragraph. Introduce your background, personality, motivations, and the
-          experiences that shaped you.
-        </p>
-        <p>
-          Secondary dummy paragraph. Add another part of your story, what matters to you, or how you
-          spend time away from work.
-        </p>
+        <p v-for="paragraph in aboutFacts.story" :key="paragraph">{{ paragraph }}</p>
       </div>
       <dl class="fact-grid">
-        <div v-for="fact in aboutFacts" :key="fact.label">
+        <div v-for="fact in aboutFacts.entries" :key="fact.label">
           <dt>{{ fact.label }}</dt>
           <dd>{{ fact.value }}</dd>
         </div>
       </dl>
     </article>
-    <div class="preference-grid">
-      <article class="preference-card">
-        <Heart aria-hidden="true" />
-        <div>
-          <h3>Things I like</h3>
-          <p>Dummy description of experiences, qualities, or activities you enjoy.</p>
-        </div>
-      </article>
-      <article class="preference-card">
-        <X aria-hidden="true" />
-        <div>
-          <h3>Not for me</h3>
-          <p>Dummy description of things or environments you generally prefer to avoid.</p>
-        </div>
-      </article>
-    </div>
     <div class="interest-groups">
-      <InterestGroup v-for="group in interestGroups" :key="group.id" :group="group" />
+      <InterestGroup v-for="group in primaryInterestGroups" :key="group.id" :group="group" />
+      <div class="compact-interest-grid">
+        <InterestGroup
+          v-for="group in compactInterestGroups"
+          :key="group.id"
+          :group="group"
+          compact
+        />
+      </div>
     </div>
   </section>
 </template>
