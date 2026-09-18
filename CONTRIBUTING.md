@@ -1,10 +1,4 @@
-# Contribution
+## Contributors and acknowledgements
 
-## Preview image link
-
-https://www.pexels.com - Markus Spiske
-
-Photo by Markus Spiske from Pexels: https://www.pexels.com/photo/coding-script-965345/
-
-# Residency image 
-- https://www.openstreetmap.org
+- **Jacques van Niekerk** — Project creator, designer, developer, owner, and maintainer.
+- **OpenAI Codex** — AI development collaborator that co-built substantial portions of the website, including its implementation, interface construction, responsive behaviour, refactoring, testing, and documentation, under the project owner's direction.

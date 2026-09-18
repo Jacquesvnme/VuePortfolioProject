@@ -1,0 +1,168 @@
+@media (hover: hover) {
+  .project-entry,
+  .editorial-row,
+  .legal-clause,
+  .certificate-entry,
+  .interest-group,
+  .experience-company,
+  .experience-company-header,
+  .experience-role,
+  .website-warning,
+  .fact-grid > div,
+  .contact-details > div {
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .experience-company-mark,
+  .experience-company-copy h4,
+  .experience-role .row-title,
+  .experience-role-period,
+  .experience-timeline-node,
+  .experience-timeline::after {
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .website-warning-status,
+  .website-warning-progress,
+  .website-warning-copy h2,
+  .website-warning-dot {
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+
+  .project-entry:hover,
+  .editorial-row:hover,
+  .legal-clause:hover,
+  .certificate-entry:hover,
+  .project-entry:focus-within,
+  .editorial-row:focus-within,
+  .legal-clause:focus-within,
+  .certificate-entry:focus-within {
+    background: var(--card);
+    box-shadow:
+      inset 0 0 0 1px var(--interactive-hover-border),
+      0 0 1.5rem var(--interactive-hover-glow);
+  }
+
+  .fact-grid > div:hover,
+  .contact-details > div:hover,
+  .contact-details > div:focus-within {
+    background: var(--card);
+    box-shadow:
+      inset 0 0 0 1px var(--interactive-hover-border),
+      0 0 1.5rem var(--interactive-hover-glow);
+  }
+
+  .fact-grid > div:hover dt,
+  .contact-details > div:hover dt,
+  .contact-details > div:focus-within dt {
+    color: var(--primary);
+  }
+
+  .interest-group:hover {
+    border-color: var(--interactive-hover-border);
+    box-shadow: 0 0 1.5rem var(--interactive-hover-glow);
+  }
+
+  .experience-company:hover,
+  .experience-company:focus-within {
+    border-color: var(--interactive-hover-border);
+    box-shadow: 0 0 1.5rem var(--interactive-hover-glow);
+  }
+
+  .experience-company-header:hover,
+  .experience-company-header:focus-within {
+    background: color-mix(in oklch, var(--primary-soft-surface) 84%, var(--primary) 16%);
+  }
+
+  .experience-company-header:hover .experience-company-mark,
+  .experience-company-header:focus-within .experience-company-mark {
+    border-color: var(--primary);
+    box-shadow: 0 0 1rem var(--interactive-hover-glow);
+  }
+
+  .experience-company-header:hover .experience-company-copy h4,
+  .experience-company-header:focus-within .experience-company-copy h4,
+  .experience-role:hover .row-title,
+  .experience-role:focus-within .row-title {
+    color: var(--primary);
+  }
+
+  .experience-role:hover,
+  .experience-role:focus-within {
+    background: color-mix(in oklch, var(--card) 92%, var(--primary) 8%);
+  }
+
+  .experience-role:hover .experience-role-period,
+  .experience-role:focus-within .experience-role-period {
+    color: var(--foreground);
+  }
+
+  .experience-role:hover .experience-timeline-node,
+  .experience-role:focus-within .experience-timeline-node {
+    border-color: var(--primary);
+    background: var(--primary);
+    box-shadow: 0 0 0.8rem var(--primary-glow);
+  }
+
+  .experience-role:hover .experience-timeline::after,
+  .experience-role:focus-within .experience-timeline::after {
+    background: color-mix(in oklch, var(--primary) 62%, var(--border));
+  }
+
+  .website-warning:hover {
+    border-color: color-mix(in oklch, var(--status-in-progress) 62%, var(--border));
+    background: color-mix(in oklch, var(--card) 84%, var(--status-in-progress) 16%);
+    box-shadow:
+      inset 0 0 0 1px color-mix(in oklch, var(--status-in-progress) 34%, transparent),
+      0 0 2rem color-mix(in oklch, var(--status-in-progress) 18%, transparent);
+  }
+
+  .website-warning:hover .website-warning-status,
+  .website-warning:hover .website-warning-progress {
+    border-color: color-mix(in oklch, var(--status-in-progress) 38%, var(--border));
+  }
+
+  .website-warning:hover .website-warning-copy h2 {
+    color: color-mix(in oklch, var(--foreground) 72%, var(--status-in-progress));
+  }
+
+  .website-warning:hover .website-warning-dot {
+    box-shadow:
+      0 0 0.35rem currentColor,
+      0 0 1.25rem currentColor;
+    transform: scale(1.16);
+  }
+
+  .project-entry:hover .project-title,
+  .editorial-row:hover .row-title,
+  .legal-clause:hover h3,
+  .certificate-entry:hover .certificate-title {
+    color: var(--primary);
+  }
+
+  .desktop-navigation a:hover,
+  .text-link:hover,
+  .scroll-cue:hover,
+  .site-footer a:hover,
+  .interest-entry-link:hover,
+  .contact-email:hover {
+    color: var(--primary);
+  }
+
+  .icon-link:hover,
+  .dialog-close:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}

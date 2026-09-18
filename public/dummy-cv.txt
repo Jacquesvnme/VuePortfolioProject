@@ -1,0 +1,4 @@
+DUMMY CURRICULUM VITAE
+
+This placeholder file exists so the Download CV interaction can be tested.
+Replace it with the final CV and update src/data/portfolio.ts before deployment.
