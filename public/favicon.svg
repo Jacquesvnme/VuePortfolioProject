@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Jacques van Niekerk monogram</title>
+  <desc id="description">An angular J and N monogram in white and green.</desc>
+  <rect width="64" height="64" fill="#101510" />
+  <path fill="#edf2e9" d="M8 10h25v8h-8v25c0 8-5 13-13 13H7v-9h4c4 0 5-2 5-5V18H8z" />
+  <path fill="#9ce28a" d="M31 10h8l14 28V10h8v46h-9L39 30v26h-8z" />
+  <path fill="#101510" d="M38 20l4 8v17h-4z" opacity=".72" />
+</svg>
