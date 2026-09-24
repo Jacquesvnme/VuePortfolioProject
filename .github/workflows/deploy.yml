@@ -29,6 +29,8 @@ jobs:
         run: npm ci
       - name: Build portfolio
         run: npm run build
+      - name: Add crawler files to the deployment
+        run: cp sitemap.xml robots.txt dist/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
