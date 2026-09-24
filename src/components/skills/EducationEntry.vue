@@ -1,17 +1,16 @@
 <script setup lang="ts">
 import type { EducationEntry } from '@/types/portfolio'
 
-defineProps<{ entry: EducationEntry; index: number }>()
+defineProps<{ entry: EducationEntry }>()
 </script>
 
 <template>
-  <article class="editorial-row education-row">
-    <span class="row-number">{{ String(index + 1).padStart(2, '0') }}</span>
-    <p class="education-period">{{ entry.period }}</p>
+  <article class="history-item focus-row">
+    <span class="history-date">{{ entry.period }}</span>
     <div>
-      <h3 class="row-title">{{ entry.qualification }}</h3>
-      <p class="education-institution">{{ entry.institution }}</p>
-      <p class="row-description">{{ entry.description }}</p>
+      <h4>{{ entry.qualification }}</h4>
+      <p>{{ entry.description }}</p>
+      <small>{{ entry.institution }}</small>
     </div>
   </article>
 </template>

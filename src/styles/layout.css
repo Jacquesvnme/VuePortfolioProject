@@ -32,12 +32,13 @@
 }
 
 .brand-panel {
-  display: grid;
+  --brand-mark-size: 2.1rem;
+  display: flex;
   min-height: 4rem;
   padding: 0.7rem 1.25rem;
   align-self: stretch;
-  align-content: center;
-  gap: 0.25rem;
+  align-items: center;
+  gap: 0.8rem;
   border-right: 1px solid var(--border);
   border-radius: 1rem 0 0 1rem;
   background: var(--brand-panel-background);
@@ -51,54 +52,32 @@
   font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 650;
-  text-transform: uppercase;
+}
+
+.brand-marker {
+  width: 0.18rem;
+  height: var(--brand-mark-size);
+  flex: 0 0 auto;
+  background: var(--primary);
+}
+
+.brand-icon {
+  display: block;
+  width: var(--brand-mark-size);
+  height: var(--brand-mark-size);
+  flex: 0 0 auto;
+}
+
+.brand-copy {
+  display: grid;
+  gap: 0.22rem;
 }
 
 .brand-subtitle {
-  color: var(--primary);
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  font-weight: 650;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  color: var(--muted-foreground);
+  font-size: 0.68rem;
+  font-weight: 500;
   transition: color 180ms ease;
-}
-
-.brand-meta {
-  display: flex;
-  min-width: 0;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.brand-meta-separator {
-  width: 1px;
-  height: 0.8rem;
-  flex: 0 0 auto;
-  background: var(--border);
-}
-
-.brand-development-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--foreground);
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  font-weight: 650;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.brand-development-dot {
-  width: 0.4rem;
-  height: 0.4rem;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  color: var(--status-in-progress);
-  background: currentColor;
-  box-shadow: 0 0 0.65rem currentColor;
 }
 
 @media (hover: hover) {
@@ -417,12 +396,27 @@
   border-bottom: 1px solid var(--border);
 }
 
+.skill-row {
+  grid-template-columns: minmax(13rem, 0.34fr) 1fr;
+}
+
+.skill-group-content {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.skill-group-content .row-description {
+  max-width: 48rem;
+  margin-top: 0;
+}
+
 .editorial-list .editorial-row:last-child {
   border-bottom: 0;
 }
 
 .skill-badges {
   align-content: start;
+  gap: 0.65rem;
 }
 
 .education-row {
@@ -610,7 +604,7 @@
 
 .certificate-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
   gap: 0;
   padding: 0;
 }
@@ -627,18 +621,6 @@
   background: var(--card);
 }
 
-.certificate-placeholder {
-  display: none;
-  min-height: 10rem;
-  border: 1px solid var(--border);
-  background: var(--card);
-}
-
-.certificate-grid[data-desktop-placeholders='1'] .certificate-placeholder-primary,
-.certificate-grid[data-desktop-placeholders='2'] .certificate-placeholder {
-  display: block;
-}
-
 .certificate-entry > div {
   min-width: 0;
 }
@@ -653,6 +635,19 @@
   font-size: 1.15rem;
   font-weight: 550;
   overflow-wrap: anywhere;
+}
+
+.certificate-title a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+
+.certificate-title svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  color: var(--primary);
 }
 
 .project-entry {
@@ -976,6 +971,37 @@
 .interest-entry p {
   color: var(--muted-foreground);
   line-height: 1.6;
+}
+
+.interest-group-coding .interest-entry {
+  grid-template-columns: minmax(14rem, 0.34fr) 1fr;
+}
+
+.interest-group-coding .interest-entry-title {
+  align-self: start;
+}
+
+.interest-group-coding .interest-entry-description,
+.interest-group-coding .interest-entry-resources,
+.interest-group-coding .interest-entry-links {
+  grid-column: 2;
+}
+
+.interest-group-coding .interest-entry-resources {
+  justify-content: flex-start;
+  margin-top: 0.4rem;
+}
+
+.interest-group-compact .interest-entry-title h4 a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.interest-group-compact .interest-entry-title h4 svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  color: var(--primary);
 }
 
 .legal-meta {

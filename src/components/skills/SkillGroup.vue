@@ -1,19 +1,17 @@
 <script setup lang="ts">
-import { Badge } from '@/components/ui/badge'
 import type { SkillGroup } from '@/types/portfolio'
 
-defineProps<{ group: SkillGroup; index: number }>()
+defineProps<{ group: SkillGroup }>()
 </script>
 
 <template>
-  <article class="editorial-row skill-row">
-    <span class="row-number">{{ String(index + 1).padStart(2, '0') }}</span>
+  <article class="capability-group focus-row">
+    <h4>{{ group.title }}</h4>
     <div>
-      <h3 class="row-title">{{ group.title }}</h3>
-      <p class="row-description">{{ group.description }}</p>
-    </div>
-    <div class="badge-list skill-badges">
-      <Badge v-for="skill in group.skills" :key="skill">{{ skill }}</Badge>
+      <p>{{ group.description }}</p>
+      <ul class="delimited-list" :aria-label="`${group.title} skills`">
+        <li v-for="skill in group.skills" :key="skill">{{ skill }}</li>
+      </ul>
     </div>
   </article>
 </template>

@@ -6,18 +6,16 @@ defineProps<{ certificate: CertificateEntry }>()
 </script>
 
 <template>
-  <article class="certificate-entry">
-    <div>
-      <h3 class="certificate-title">{{ certificate.title }}</h3>
-      <p>{{ certificate.issuer }} · {{ certificate.year }}</p>
-    </div>
+  <li class="credential-entry">
     <a
-      class="icon-link"
       :href="certificate.credentialUrl"
-      aria-label="View dummy credential"
-      @click.prevent
+      target="_blank"
+      rel="noopener noreferrer"
+      :aria-label="`${certificate.title}, ${certificate.issuer}, ${certificate.year} (opens in a new tab)`"
     >
+      <strong>{{ certificate.title }}</strong>
+      <span>{{ certificate.issuer }} · {{ certificate.year }}</span>
       <ArrowUpRight aria-hidden="true" />
     </a>
-  </article>
+  </li>
 </template>

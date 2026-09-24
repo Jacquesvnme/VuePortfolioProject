@@ -1,50 +1,67 @@
 <script setup lang="ts">
-import { UserRound } from '@lucide/vue'
 import InterestGroup from '@/components/about/InterestGroup.vue'
-import SectionHeading from '@/components/common/SectionHeading.vue'
 import { aboutFacts, interestGroups } from '@/data/portfolio'
 
-const primaryInterestGroups = interestGroups.filter((group) =>
-  ['personal-background', 'coding'].includes(group.id),
-)
+const codingGroup = interestGroups.find((group) => group.id === 'coding')
 const compactInterestGroups = interestGroups.filter((group) =>
   ['games', 'music', 'manga', 'anime'].includes(group.id),
 )
 </script>
 
 <template>
-  <section id="about" class="page-section" aria-labelledby="about-title">
-    <SectionHeading
-      eyebrow="Beyond the code"
-      title="About"
-      description="Personal information about myself."
-    />
-    <article class="story-panel glass-panel">
-      <header class="story-header">
-        <UserRound aria-hidden="true" />
-        <h3>Personal story</h3>
-        <span>Main introduction</span>
-      </header>
-      <div class="story-copy">
-        <p v-for="paragraph in aboutFacts.story" :key="paragraph">{{ paragraph }}</p>
-      </div>
-      <dl class="fact-grid">
-        <div v-for="fact in aboutFacts.entries" :key="fact.label">
-          <dt>{{ fact.label }}</dt>
-          <dd>{{ fact.value }}</dd>
+  <section id="about" class="about-section full-section" aria-labelledby="about-title">
+    <div class="content-width">
+      <div class="page-heading about-heading">
+        <div>
+          <span class="section-kicker">Beyond the code</span>
+          <h2 id="about-title">About<span class="title-stop">.</span></h2>
         </div>
-      </dl>
-    </article>
-    <div class="interest-groups">
-      <InterestGroup v-for="group in primaryInterestGroups" :key="group.id" :group="group" />
-      <div class="compact-interest-grid">
-        <InterestGroup
-          v-for="group in compactInterestGroups"
-          :key="group.id"
-          :group="group"
-          compact
-        />
+        <p>A few things that shape what I build and how I spend my time.</p>
       </div>
+
+      <div class="about-overview">
+        <div class="about-story">
+          <span class="about-margin-label">Personal story</span>
+          <p
+            v-for="(paragraph, index) in aboutFacts.story"
+            :key="paragraph"
+            :class="{ 'story-in-progress': index > 0 }"
+          >
+            {{ paragraph }}
+          </p>
+        </div>
+        <dl class="about-facts">
+          <div v-for="fact in aboutFacts.entries" :key="fact.label">
+            <dt>{{ fact.label }}</dt>
+            <dd>{{ fact.value }}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div v-if="codingGroup" class="interest-heading">
+        <div>
+          <span class="section-kicker">What holds my attention</span>
+          <h3>Coding interests</h3>
+        </div>
+        <p>{{ codingGroup.description }}</p>
+      </div>
+      <InterestGroup v-if="codingGroup" :group="codingGroup" />
+
+      <section class="outside-section" aria-labelledby="outside-title">
+        <div class="outside-heading">
+          <span class="section-kicker">Away from the editor</span>
+          <h3 id="outside-title">What I’m into.</h3>
+          <p>A few of the games, music, manga, and anime I keep returning to.</p>
+        </div>
+        <div class="outside-grid">
+          <InterestGroup
+            v-for="group in compactInterestGroups"
+            :key="group.id"
+            :group="group"
+            compact
+          />
+        </div>
+      </section>
     </div>
   </section>
 </template>

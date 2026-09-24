@@ -73,15 +73,7 @@
   }
 
   .certificate-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .certificate-grid .certificate-placeholder {
-    display: none;
-  }
-
-  .certificate-grid[data-tablet-placeholders='1'] .certificate-placeholder-primary {
-    display: block;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
   }
 }
 
@@ -104,15 +96,6 @@
   .brand-subtitle {
     display: block;
     white-space: nowrap;
-  }
-
-  .brand-meta {
-    gap: 0.45rem;
-  }
-
-  .brand-development-status {
-    font-size: 0.52rem;
-    letter-spacing: 0.08em;
   }
 
   .header-actions {
@@ -192,6 +175,17 @@
     grid-template-columns: 1fr;
   }
 
+  .skill-row,
+  .interest-group-coding .interest-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-group-coding .interest-entry-description,
+  .interest-group-coding .interest-entry-resources,
+  .interest-group-coding .interest-entry-links {
+    grid-column: 1;
+  }
+
   .subsection-heading,
   .editorial-row,
   .education-row,
@@ -262,10 +256,6 @@
   .certificate-grid,
   .contact-details {
     grid-template-columns: 1fr;
-  }
-
-  .certificate-grid[data-tablet-placeholders] .certificate-placeholder {
-    display: none;
   }
 
   .contact-details {
@@ -410,20 +400,6 @@
   .brand-subtitle {
     font-size: 0.52rem;
     letter-spacing: 0.08em;
-  }
-
-  .brand-meta {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.15rem;
-  }
-
-  .brand-meta-separator {
-    display: none;
-  }
-
-  .brand-development-status {
-    font-size: 0.48rem;
   }
 
   .header-actions {

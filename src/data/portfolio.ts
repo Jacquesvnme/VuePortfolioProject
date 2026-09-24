@@ -4,10 +4,13 @@ import type {
   ContactDetails,
   EducationEntry,
   HomeDetails,
+  HomePresentation,
   InterestGroup,
   LegalClause,
+  LegalPresentation,
   NavigationItem,
   Project,
+  ProjectPresentation,
   SkillGroup,
   WorkExperience,
 } from '@/types/portfolio'
@@ -60,7 +63,7 @@ export const projects: Project[] = [
 export const skillGroups: SkillGroup[] = [
   {
     title: 'Frontend development',
-    description: 'Frontend related development knowdledge.',
+    description: 'Building responsive interfaces and accessible browser experiences.',
     skills: [
       'Vue.js',
       'TypeScript',
@@ -75,7 +78,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'Backend development',
-    description: 'Backend related development knowdledge.',
+    description: 'Designing application logic, APIs, data access, and service integrations.',
     skills: [
       'C#',
       '.NET',
@@ -91,13 +94,12 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'Tools & workflow',
-    description: 'Useful tools, and knowledge semi related to the industry.',
+    description: 'Supporting development, testing, automation, version control, and documentation.',
     skills: ['Git', 'GitHub Actions', 'Testing', 'Markdown', 'XML', 'JSON', 'HTTP', 'Bash'],
   },
   {
     title: 'Other tools',
-    description:
-      'Other tools that I have experience with. Some relevant, other may not be, knowledge non the less.',
+    description: 'Additional software used across development and general productivity work.',
     skills: [
       'Word',
       'Excel',
@@ -113,9 +115,8 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: 'Archived skills',
-    description:
-      'Skills I’ve used previously but haven’t worked with recently. I may need some time to refresh my knowledge.',
+    title: 'Previous experience',
+    description: 'Technologies I have worked with before and can refresh when needed.',
     skills: ['Node.Js', 'Next Js', 'Express Js', 'Plotly Js', 'PostGreSql', 'OpenCV'],
   },
 ]
@@ -525,7 +526,18 @@ export const interestGroups: InterestGroup[] = [
 export const legalClauses: LegalClause[] = [
   {
     title: 'Information and privacy',
-    paragraphs: ['This site does not collect any personal information.'],
+    paragraphs: [
+      'This portfolio does not use a contact form, advertising trackers, or analytics to intentionally collect visitor profiles.',
+      'The selected light or dark theme is saved in local storage on your device so the preference can be restored on a later visit.',
+      'The site is published through GitHub and routed through Cloudflare. Those infrastructure providers may process routine technical request information under their own policies; the portfolio owner does not use that information to identify individual visitors.',
+    ],
+  },
+  {
+    title: 'Contact and external services',
+    paragraphs: [
+      'Email, GitHub, LinkedIn, credential providers, and other destinations linked from this portfolio are external services governed by their own privacy policies and terms.',
+      'Information you voluntarily send through email or another linked service is used only to read and respond to that communication.',
+    ],
   },
   {
     title: 'License',
@@ -585,4 +597,82 @@ export const contactDetails: ContactDetails = {
       show: true,
     },
   ],
+}
+
+// Presentation data for the production portfolio. These fields can be completed or extended without changing page components.
+export const homePresentation: HomePresentation = {
+  presence: 'Based in Gauteng, South Africa',
+  name: 'Jacques van Niekerk',
+  title: ['Software', 'engineer.'],
+  description: 'I build focused applications that make everyday work a little easier.',
+  focus: 'Full stack / Personal projects',
+  contextKicker: 'A little more context',
+  contextTitle: 'A builder of useful things.',
+  contextParagraphs: [
+    'I’m a full stack developer working with Vue, C# and .NET, with regular work in Visual Basic, Blazor and MudBlazor applications.',
+    'At home I build React and Web API applications, usually smaller tools with a clear purpose: organizing, automating and understanding personal data.',
+  ],
+}
+
+export const projectPresentations: Record<string, ProjectPresentation> = {
+  'portfolio-website': {
+    subtitle: 'Personal project / Web',
+    narrative: [
+      'The portfolio is designed as a long-lived personal reference rather than a fixed campaign page. Its content comes from a central typed data source so projects, professional history, certificates, and personal interests can grow without duplicating presentation markup.',
+      'Reusable Vue components translate that content into one continuous experience. Every section preserves stable URL anchors, supports keyboard navigation, and adapts between the wide editorial composition and compact mobile reading order.',
+      'The visual system combines forest imagery, restrained green signals, sharp rules, and a dark glass treatment. Light and dark themes keep the same hierarchy instead of becoming separate visual identities.',
+      'New project previews can be authored as isolated frontend components and selected through a unique key stored with each project entry.',
+    ],
+    role: 'Design and development',
+    format: 'Single-page portfolio',
+    focus: [
+      {
+        title: 'Content architecture',
+        description: 'Centralized data and reusable presentation components.',
+      },
+      {
+        title: 'Responsive design',
+        description: 'A stable hierarchy from wide displays to narrow phones.',
+      },
+      {
+        title: 'Accessibility',
+        description: 'Keyboard use, focus visibility, semantics, and reduced motion.',
+      },
+      {
+        title: 'Maintainability',
+        description: 'New entries can be added without rebuilding page layouts.',
+      },
+    ],
+    previewKey: 'portfolio-website-preview',
+    previewFooter: ['Vue / TypeScript', 'Responsive · Light & dark'],
+    sections: {
+      narrative: true,
+      status: true,
+      role: true,
+      format: true,
+      technologies: true,
+      focus: true,
+      highlights: true,
+      repository: true,
+    },
+  },
+  'still-to-come': {
+    subtitle: 'Future work',
+    sections: {
+      narrative: false,
+      status: true,
+      role: false,
+      format: false,
+      technologies: false,
+      focus: false,
+      highlights: false,
+      repository: false,
+    },
+  },
+}
+
+export const legalPresentation: LegalPresentation = {
+  lastUpdated: '24 September 2026',
+  introduction:
+    'How this portfolio handles information, external services, and the license that applies to its design and code.',
 }

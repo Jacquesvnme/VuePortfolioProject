@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import SectionHeading from '@/components/common/SectionHeading.vue'
 import CertificateEntry from '@/components/skills/CertificateEntry.vue'
 import EducationEntry from '@/components/skills/EducationEntry.vue'
 import SkillGroup from '@/components/skills/SkillGroup.vue'
@@ -10,73 +9,63 @@ import { certificates, education, skillGroups, workExperience } from '@/data/por
 <template>
   <section
     id="skills-and-academics"
-    class="page-section"
+    class="content-width skills-main full-section"
     aria-labelledby="skills-and-academics-title"
   >
-    <SectionHeading
-      eyebrow="Capabilities & history"
-      title="Skills & Academics"
-      description="Information about my academic history and skills"
-    />
-    <div class="subsection">
-      <div class="subsection-heading">
-        <p class="eyebrow">01 / Skills</p>
-        <h3>Tools I work with</h3>
+    <div class="page-heading skills-heading">
+      <div>
+        <span class="section-kicker">Practice and progress</span>
+        <h2 id="skills-and-academics-title">
+          Skills &amp;<br />Academics<span class="title-stop">.</span>
+        </h2>
       </div>
-      <div class="editorial-list content-panel glass-panel">
-        <SkillGroup
-          v-for="(group, index) in skillGroups"
-          :key="group.title"
-          :group="group"
-          :index="index"
-        />
+      <p>The tools I use, the work that shaped my practice, and the studies behind it.</p>
+    </div>
+
+    <div class="skills-layout">
+      <section class="capability-section" aria-labelledby="capability-title">
+        <div class="column-heading">
+          <h3 id="capability-title">Capabilities</h3>
+          <span>Current toolkit</span>
+        </div>
+        <SkillGroup v-for="group in skillGroups" :key="group.title" :group="group" />
+      </section>
+
+      <div class="history-column">
+        <section class="history-section" aria-labelledby="experience-title">
+          <div class="column-heading">
+            <h3 id="experience-title">Experience</h3>
+            <span>Work</span>
+          </div>
+          <WorkExperienceEntry
+            v-for="experience in workExperience"
+            :key="experience.id"
+            :experience="experience"
+          />
+        </section>
+
+        <section class="history-section education-section" aria-labelledby="education-title">
+          <div class="column-heading">
+            <h3 id="education-title">Education</h3>
+            <span>Study</span>
+          </div>
+          <EducationEntry v-for="entry in education" :key="entry.qualification" :entry="entry" />
+        </section>
       </div>
     </div>
-    <div class="subsection">
-      <div class="subsection-heading">
-        <p class="eyebrow">02 / Work experience</p>
-        <h3>Professional experience</h3>
+
+    <section class="credentials" aria-labelledby="credentials-title">
+      <div class="column-heading">
+        <h3 id="credentials-title">Continued learning</h3>
+        <span>Certificates</span>
       </div>
-      <div class="experience-list">
-        <WorkExperienceEntry
-          v-for="experience in workExperience"
-          :key="experience.id"
-          :experience="experience"
-        />
-      </div>
-    </div>
-    <div class="subsection">
-      <div class="subsection-heading">
-        <p class="eyebrow">03 / Education</p>
-        <h3>Formal education</h3>
-      </div>
-      <div class="editorial-list content-panel glass-panel">
-        <EducationEntry
-          v-for="(entry, index) in education"
-          :key="entry.qualification"
-          :entry="entry"
-          :index="index"
-        />
-      </div>
-    </div>
-    <div class="subsection">
-      <div class="subsection-heading">
-        <p class="eyebrow">04 / Certificates</p>
-        <h3>Continued learning</h3>
-      </div>
-      <div
-        class="certificate-grid content-panel glass-panel"
-        :data-desktop-placeholders="(3 - (certificates.length % 3)) % 3"
-        :data-tablet-placeholders="certificates.length % 2"
-      >
+      <ul class="credential-list">
         <CertificateEntry
-          v-for="(certificate, index) in certificates"
-          :key="`${certificate.title}-${certificate.issuer}-${certificate.year}-${index}`"
+          v-for="certificate in certificates"
+          :key="`${certificate.title}-${certificate.issuer}-${certificate.year}`"
           :certificate="certificate"
         />
-        <div class="certificate-placeholder certificate-placeholder-primary" aria-hidden="true" />
-        <div class="certificate-placeholder certificate-placeholder-secondary" aria-hidden="true" />
-      </div>
-    </div>
+      </ul>
+    </section>
   </section>
 </template>
